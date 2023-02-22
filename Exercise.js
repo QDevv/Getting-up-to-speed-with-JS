@@ -397,6 +397,7 @@
 
  n = '1234'
  console.log(n.split('').reverse().join(''));
+ console.log(n.split('').reverse().join(''));
 
  nn = ['m','a','d']
 //  console.log(nn.split('').reverse().join(''));
@@ -1013,7 +1014,7 @@ class countDown{
   }
   update(){
     this.updateCountDown()
-    console.log(this.minutes + ':' + this.sec);
+    // console.log(this.minutes + ':' + this.sec);
   }
   updateCountDown(){
     this.sec -= 1
@@ -1066,12 +1067,12 @@ function ctd (){
    sec = 60;
  };
  console.log(minutes + ':' + sec);
- if (minutes == 0 && sec <= 0) {
+//  if (minutes == 0 && sec <= 0) {
     console.log('Time up');
    clearInterval(ded);
  }
  
-}
+
  ded = setInterval(ctd, 1000)
 //  console.log(ded);
   

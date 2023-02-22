@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 var myVariable;
 myVariable = 'live'
 console.log(myVariable);
@@ -45,11 +53,14 @@ let boys = ['Yemi', 'Tunde', 'bayo']
 //  console.log(joiner);
 
 let count = boys.push('momo')
+let addMore = boys.push('qd')
+console.log(addMore);
 console.log(count);
 console.log(boys);
 
+
 let nam = 'AAsodi'
-console.log(nam > 'cre');
+console.log(nam > 'are');
 
 let score = '555'
    score = Number(score)
