@@ -147,16 +147,16 @@
 // console.log(vox[3]);
 // console.log(vox.length);
 
-let nnum = prompt("input Number", 0);
-console.log(nnum.length);
+// let nnum = prompt("input Number", 0);
+// console.log(nnum.length);
 
-let reverseNumber = (gt, nnum) => {
-  if (gt == 0) return "";
+// let reverseNumber = (gt, nnum) => {
+//   if (gt == 0) return "";
 
-  return nnum[gt - 1] + reverseNumber(gt - 1, nnum);
-};
+//   return nnum[gt - 1] + reverseNumber(gt - 1, nnum);
+// };
 
-console.log(reverseNumber(nnum.length, nnum));
+// console.log(reverseNumber(nnum.length, nnum));
 
 // // Math Operators
 
@@ -215,35 +215,35 @@ console.log(reverseNumber(nnum.length, nnum));
 // console.log(funcSORT);
 
 
-let cap = prompt(['type a sentence']).split(' ')
-console.log(cap);
-let deed = 0;
+// let cap = prompt(['type a sentence']).split(' ')
+// console.log(cap);
+// let deed = 0;
 
-const pp = cap[deed][0].toUpperCase() + cap[deed].slice(1, cap[deed].length)
-// console.log(cap[0].slice(1,3));
-console.log(pp);
+// const pp = cap[deed][0].toUpperCase() + cap[deed].slice(1, cap[deed].length)
+// // console.log(cap[0].slice(1,3));
+// console.log(pp);
 
-let xs = ['how', 'are', 'you']
-let gv = xs[2].slice(0,3)
-console.log(gv);
-let amm = xs[0][0]
-console.log(typeof amm);
+// let xs = ['how', 'are', 'you']
+// let gv = xs[2].slice(0,3)
+// console.log(gv);
+// let amm = xs[0][0]
+// console.log(typeof amm);
 
-console.log(Number.isInteger(deed));
+// console.log(Number.isInteger(deed));
 
-console.log(xs[0][0].toUpperCase() + xs[0].slice(1,3));
-console.log(xs);
+// console.log(xs[0][0].toUpperCase() + xs[0].slice(1,3));
+// console.log(xs);
 
-let funcCap = (ded) => {
-    if (ded == cap.length ) return '';
+// let funcCap = (ded) => {
+//     if (ded == cap.length ) return '';
 
-    return cap[ded][0].toUpperCase() + cap[ded].slice(1, cap[ded].length) + ' ' + funcCap(ded + 1)
+//     return cap[ded][0].toUpperCase() + cap[ded].slice(1, cap[ded].length) + ' ' + funcCap(ded + 1)
 
 
-}
+// }
 
-const capitalize = funcCap(0)
-console.log(capitalize);
+// const capitalize = funcCap(0)
+// console.log(capitalize);
 
 
 // let alpha = prompt('Type a word').split('')
@@ -376,34 +376,122 @@ console.log(capitalize);
 
         // REVERSE A NUMBER
 
-        let Reverse_Number = (n) => {
-          // convert to String
-          n = n + "";
+        // let Reverse_Number = (n) => {
+        //   // convert to String
+        //   n = n + "";
 
-          return n.split("").reverse().join('');
-        }
+        //   return n.split("").reverse().join('');
+        // }
 
-        console.log(Number(Reverse_Number(34218)));
+        // console.log(Number(Reverse_Number(34218)));
 
          
 
 
-        let upper_case = (str) => {
-          var array1 = str.split(' ');
-          console.log(array1);
-          var newArray = [];
+        // let upper_case = (str) => {
+        //   var array1 = str.split(' ');
+        //   console.log(array1);
+        //   var newArray = [];
 
-          for (let x = 0; x < array1.length; x++) {
-               newArray.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+        //   for (let x = 0; x < array1.length; x++) {
+        //     console.log(array1[x]);
+        //        newArray.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
             
-            console.log(newArray);
+        //     console.log(newArray);
+        //   }
+        //   return newArray.join(' ')
+        // }
+
+        // console.log(upper_case('the man is here'));
+
+
+
+        // TEST PRIME NUMBER
+
+        let Test_Prime = (n) => {
+          if (n===1) {
+            return false;
           }
-          return newArray.join(' ')
+          else if (n===2) {
+            return true;
+          }
+          else{
+            for (let p = 2; p < n; p++) {
+              if (n % p == 0) {
+                return false;
+              }
+              
+              
+            }
+            return true;
+          }
         }
 
-        console.log(upper_case('the man is here'));
+        // console.log(Test_Prime(4));
+
+
+        function countSelected(selectObject) {
+          let numberSelected = 0;
+          console.log( selectObject.options);
+          for (let i = 0; i < selectObject.options.length; i++) {
+            console.log(selectObject.options[i].selected);
+            if (selectObject.options[i].selected) {
+              numberSelected++;
+              console.log(numberSelected);
+            }
+          }
+          return numberSelected;
+        }
+        
+        const btn = document.getElementById("btn");
+        
+        btn.addEventListener("click", () => {
+          
+          const musicTypes = document.selectForm.musicTypes;
+          console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+        });
+        console.log(document.selectForm.musicTypes);
+
+
+        let sttr = 'balablu'
+
+        const getStr = (inc) => {
+
+          if (sttr[inc] == sttr.length) return ned;
+
+           for (let s = 0; s < sttr.length; s++) {
+            // console.log(sttr[s]);
+            
+            
+            if (sttr[inc] != sttr[s] && sttr.indexOf(sttr[inc]) != sttr.indexOf(sttr[s]) ) {
+              `${sttr[inc]} occured once` 
+            }
+            else if (sttr[inc] == sttr[s] && sttr.indexOf(sttr[inc]) != sttr.indexOf(sttr[s])) {
+              let ned = [];
+              ned.push(sttr[inc])
+            }
+            
+            // getStr(inc + 1)
+           
+            
+          }
+        }
+        getStr(0)
+        
+
+
+
+
 
         
+
+
+
+
+
+        
+
+
   
 
 
