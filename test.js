@@ -455,26 +455,48 @@
 
         let sttr = 'balablu'
 
+        
+        for (let i = 0; i < sttr.length; i++) {
+          // console.log(sttr[i]);
+          // console.log(sttr.split('').indexOf(sttr[i]));
+          if (sttr[0] == sttr[i]) {
+            // console.log(sttr[0]);   
+            let nedd = [];
+            nedd.push(sttr[0])
+            console.log(`${sttr[0]} occured ${nedd.push(sttr[0])} times`);
+
+          }
+          
+          if (sttr[0]==sttr[i] && sttr.indexOf(sttr[0]) != sttr.indexOf(sttr[i])) {
+            console.log(sttr[0]);
+            let nedd = [];
+            nedd.push(sttr[0])
+            console.log(`${sttr[0]} occured ${nedd.length} times`);
+           }
+        }
+
+       
+
+
         const getStr = (inc) => {
 
-          if (sttr[inc] == sttr.length) return ned;
+          if (sttr[inc] == sttr.length) return '';
 
            for (let s = 0; s < sttr.length; s++) {
             // console.log(sttr[s]);
-            
-            
-            if (sttr[inc] != sttr[s] && sttr.indexOf(sttr[inc]) != sttr.indexOf(sttr[s]) ) {
-              `${sttr[inc]} occured once` 
-            }
-            else if (sttr[inc] == sttr[s] && sttr.indexOf(sttr[inc]) != sttr.indexOf(sttr[s])) {
-              let ned = [];
-              ned.push(sttr[inc])
-            }
-            
-            // getStr(inc + 1)
            
+            if (sttr[inc] == sttr[s]) {
+              let nedd = [];
+              nedd.push(sttr[inc])
+             console.log(`${sttr[inc]} occured ${nedd.push(sttr[inc])} times`);
             
-          }
+            }
+              
+            }
+            
+            
+
+          getStr(inc + 1)
         }
         getStr(0)
         
