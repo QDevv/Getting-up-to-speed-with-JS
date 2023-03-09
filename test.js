@@ -207,13 +207,11 @@
 
 // console.log(arrangeAlpha());
 
-
 // const points = [40, 100, 1, 5, 47, 66];
 
 // let funcSORT = points.sort((a, b) => a-b)
 
 // console.log(funcSORT);
-
 
 // let cap = prompt(['type a sentence']).split(' ')
 // console.log(cap);
@@ -239,12 +237,10 @@
 
 //     return cap[ded][0].toUpperCase() + cap[ded].slice(1, cap[ded].length) + ' ' + funcCap(ded + 1)
 
-
 // }
 
 // const capitalize = funcCap(0)
 // console.log(capitalize);
-
 
 // let alpha = prompt('Type a word').split('')
 
@@ -253,7 +249,6 @@
 // let arrAlpha = alpha.sort().join('')
 
 // console.log(arrAlpha);
-
 
 // let capitalizer = prompt('Type a word').split(' ')
 // console.log(capitalizer);
@@ -267,11 +262,8 @@
 //  return capitalizer[pas][0].toUpperCase() + capitalizer[pas].slice(1) + ' ' + funcCapitalize(pas + 1)
 // }
 
-
 // let dcv = funcCapitalize(0)
 // console.log(dcv);
-
-
 
 // let Longest = prompt('Type a word').split(' ').sort((a, b) => b.length -a.length)[0]
 
@@ -279,7 +271,7 @@
 
 // let funcLongest = (long) => {
 //   if (Longest.length == long) {
-    
+
 //   }
 //   return Longest[long] + funcLongest(long + 1)
 // }
@@ -290,9 +282,8 @@
 
 //   if (vc == 8) ab++;
 
-  
 //   console.log(ab);
- 
+
 // }
 
 // let hm = 3;
@@ -302,7 +293,7 @@
 // if (hm != vowell[vw].length) {
 //   vw = 0;
 //   console.log('vw is 00');
- 
+
 //  }
 
 //  if (hm == vowell[vw].length ) {
@@ -318,9 +309,6 @@
 //  }
 //  if (vw == vowell.length) return neww
 
-
-
-
 // let vowelFind = (sstr) => {
 //  const count = sstr.match(/[aeiou]/gi).length
 
@@ -332,26 +320,23 @@
 // const ressult = vowelFind(stringg)
 // console.log(ressult);
 
-
 // let checkPrime = prompt('Enter a Number')
 
 // let funcFindPrime = (checkPrime) => {
 // if (checkPrime <= 1)
 //   return false;
 
-//   for (let i = 2; i < checkPrime; i++) 
-//     if (checkPrime% i == 0) 
+//   for (let i = 2; i < checkPrime; i++)
+//     if (checkPrime% i == 0)
 //     return false;
 
 //     return true;
-    
+
 // }
 
 // funcFindPrime(9)
 //         ? console.log('true')
 //         : console.log('false');
-
-
 
 //         let findType = (nn) => {
 
@@ -360,167 +345,213 @@
 
 //         findType('8')
 
+// let findNum = prompt('Enter a number: ').split('')
+// console.log(findNum);
+
+// let funcSORT = () => {
+//   findNum.sort((a,b) => a-b )
+
+//   console.log(`${findNum[1]},${findNum[findNum.length -2]}`);
+// }
+
+// funcSORT()
+
+// REVERSE A NUMBER
+
+// let Reverse_Number = (n) => {
+//   // convert to String
+//   n = n + "";
+
+//   return n.split("").reverse().join('');
+// }
+
+// console.log(Number(Reverse_Number(34218)));
+
+// let upper_case = (str) => {
+//   var array1 = str.split(' ');
+//   console.log(array1);
+//   var newArray = [];
+
+//   for (let x = 0; x < array1.length; x++) {
+//     console.log(array1[x]);
+//        newArray.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+
+//     console.log(newArray);
+//   }
+//   return newArray.join(' ')
+// }
+
+// console.log(upper_case('the man is here'));
+
+// TEST PRIME NUMBER
+
+let Test_Prime = (n) => {
+  if (n === 1) {
+    return false;
+  } else if (n === 2) {
+    return true;
+  } else {
+    for (let p = 2; p < n; p++) {
+      if (n % p == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+};
+
+// console.log(Test_Prime(4));
+
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  console.log(selectObject.options);
+  for (let i = 0; i < selectObject.options.length; i++) {
+    console.log(selectObject.options[i].selected);
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+      console.log(numberSelected);
+    }
+  }
+  return numberSelected;
+}
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+});
+console.log(document.selectForm.musicTypes);
+
+let sttr = "balablu";
+
+for (let i = 0; i < sttr.length; i++) {
+  // console.log(sttr[i]);
+  // console.log(sttr.split('').indexOf(sttr[i]));
+  if (sttr[0] == sttr[i]) {
+    // console.log(sttr[0]);
+    let nedd = [];
+    nedd.push(sttr[0]);
+    console.log(`${sttr[0]} occured ${nedd.push(sttr[0])} times`);
+  }
+
+  if (sttr[0] == sttr[i] && sttr.indexOf(sttr[0]) != sttr.indexOf(sttr[i])) {
+    console.log(sttr[0]);
+    let nedd = [];
+    nedd.push(sttr[0]);
+    console.log(`${sttr[0]} occured ${nedd.length} times`);
+  }
+}
+
+const getStr = (inc) => {
+  if (sttr[inc] == sttr.length) return "";
+
+  for (let s = 0; s < sttr.length; s++) {
+    // console.log(sttr[s]);
+
+    if (sttr[inc] == sttr[s]) {
+      let nedd = [];
+      nedd.push(sttr[inc]);
+      console.log(`${sttr[inc]} occured ${nedd.push(sttr[inc])} times`);
+    }
+  }
+
+  getStr(inc + 1);
+};
+// getStr(0)
+
+// JS REGEX; REPLACE() && Match
+let text = "Is this all there is?";
+let ressultt = text.replace(/is/g, "dd");
+console.log(ressultt);
+
+let text2 = "1234567892";
+let extractt = text2.match(/[1-4]/g);
+console.log(extractt);
+
+let text3 = "how have you been";
+let extractt2 = text3.match(/[h]/g);
+
+console.log(extractt2);
+
+let text_q = "green, black , blue, red, red, green";
+
+let veriry = text_q.match(/green|red/g);
+console.log(veriry);
+
+// A GLOBAL SEARCH FOR DIGITS IN A STRING
+
+let text4 = "123 5go!";
+let reslt = text4.match(/\d/g);
+
+console.log(reslt);
+
+// SEARCH FOR WHITESPACE CHARACTERS IN A STRING
+
+let strrr = "how have you been";
+let rsltt = strrr.replace(/\S/g, "s");
+
+console.log(rsltt);
+
+// FIND A MATCH AT THE BEGINNING OF A WORD
+
+let sim = "bad, beat, cat, bee, cabe";
+let rst5 = sim.search(/be\b/);
+console.log(rst5);
 
 
-        // let findNum = prompt('Enter a number: ').split('')
-        // console.log(findNum);
+let sdd = 'she has two eggs'
+let temm = [...sdd]
+console.log(temm);
 
-        // let funcSORT = () => {
-        //   findNum.sort((a,b) => a-b )
-
-        //   console.log(`${findNum[1]},${findNum[findNum.length -2]}`);
-        // }
-
-        // funcSORT()
-
-
-        // REVERSE A NUMBER
-
-        // let Reverse_Number = (n) => {
-        //   // convert to String
-        //   n = n + "";
-
-        //   return n.split("").reverse().join('');
-        // }
-
-        // console.log(Number(Reverse_Number(34218)));
-
-         
-
-
-        // let upper_case = (str) => {
-        //   var array1 = str.split(' ');
-        //   console.log(array1);
-        //   var newArray = [];
-
-        //   for (let x = 0; x < array1.length; x++) {
-        //     console.log(array1[x]);
-        //        newArray.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
-            
-        //     console.log(newArray);
-        //   }
-        //   return newArray.join(' ')
-        // }
-
-        // console.log(upper_case('the man is here'));
-
-
-
-        // TEST PRIME NUMBER
-
-        let Test_Prime = (n) => {
-          if (n===1) {
-            return false;
-          }
-          else if (n===2) {
-            return true;
-          }
-          else{
-            for (let p = 2; p < n; p++) {
-              if (n % p == 0) {
-                return false;
-              }
-              
-              
-            }
-            return true;
-          }
-        }
-
-        // console.log(Test_Prime(4));
-
-
-        function countSelected(selectObject) {
-          let numberSelected = 0;
-          console.log( selectObject.options);
-          for (let i = 0; i < selectObject.options.length; i++) {
-            console.log(selectObject.options[i].selected);
-            if (selectObject.options[i].selected) {
-              numberSelected++;
-              console.log(numberSelected);
-            }
-          }
-          return numberSelected;
-        }
-        
-        const btn = document.getElementById("btn");
-        
-        btn.addEventListener("click", () => {
-          
-          const musicTypes = document.selectForm.musicTypes;
-          console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
-        });
-        console.log(document.selectForm.musicTypes);
-
-
-        let sttr = 'balablu'
-
-        
-        for (let i = 0; i < sttr.length; i++) {
-          // console.log(sttr[i]);
-          // console.log(sttr.split('').indexOf(sttr[i]));
-          if (sttr[0] == sttr[i]) {
-            // console.log(sttr[0]);   
-            let nedd = [];
-            nedd.push(sttr[0])
-            console.log(`${sttr[0]} occured ${nedd.push(sttr[0])} times`);
-
-          }
-          
-          if (sttr[0]==sttr[i] && sttr.indexOf(sttr[0]) != sttr.indexOf(sttr[i])) {
-            console.log(sttr[0]);
-            let nedd = [];
-            nedd.push(sttr[0])
-            console.log(`${sttr[0]} occured ${nedd.length} times`);
-           }
-        }
-
-       
-
-
-        const getStr = (inc) => {
-
-          if (sttr[inc] == sttr.length) return '';
-
-           for (let s = 0; s < sttr.length; s++) {
-            // console.log(sttr[s]);
-           
-            if (sttr[inc] == sttr[s]) {
-              let nedd = [];
-              nedd.push(sttr[inc])
-             console.log(`${sttr[inc]} occured ${nedd.push(sttr[inc])} times`);
-            
-            }
-              
-            }
-            
-            
-
-          getStr(inc + 1)
-        }
-        getStr(0)
-        
-
-
-
-
-
-        
-
-
-
-
-
-        
-
-
+let uchars = {
   
+};
+console.log(uchars['namee']);
+
+
+"the eth".replace(/\S/g, function oof(i) {
+  
+  uchars[i] = 'e'
+});
+console.log(uchars);
+
+//  Find the Unicode character specified by the hexadecimal number xxxx
+
+// CHECK NUMBER OF OCCURRENCE
+
+let char_Counts = (str1) => {
+  let uchars = {};
+  str1.replace(/\s/g, function (i) {
+    uchars[i] = isNaN(uchars[i]) ? 1 : uchars[i] + 1;
+
+  });
+};
+
+// console.log(char_Counts('The quick brown fox jumps over the lazy dog'));
 
 
 
+// OBJECTSSS
 
+const myhouse = new Object();
 
+myhouse.size = 55;
+myhouse.location = 'lagos';
+myhouse.energy = function() {
+  console.log('prepaid meter');
+}
+myhouse.energy()
 
+const myhouse5 = {
+  size : 55,
+  location : 'Lekki',
+  colour: 'blue',
+  Area : function(lenght, breadth) {
+    console.log(lenght*breadth);
+  }
 
+}
 
-
+myhouse5.Area(23,42)
+console.log(myhouse5.size);
