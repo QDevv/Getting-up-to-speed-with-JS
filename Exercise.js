@@ -561,7 +561,7 @@ const student = {
 console.log(Array.prototype.pop.call(student));
 // console.log();
 console.log(Object.entries(student));
-let vve = Object.entries(student).l
+let vve = Object.entries(student)
 
 // console.log(vve.pop());
 

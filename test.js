@@ -499,20 +499,15 @@ let sim = "bad, beat, cat, bee, cabe";
 let rst5 = sim.search(/be\b/);
 console.log(rst5);
 
-
-let sdd = 'she has two eggs'
-let temm = [...sdd]
+let sdd = "she has two eggs";
+let temm = [...sdd];
 console.log(temm);
 
-let uchars = {
-  
-};
-console.log(uchars['namee']);
-
+let uchars = {};
+console.log(uchars["namee"]);
 
 "the eth".replace(/\S/g, function oof(i) {
-  
-  uchars[i] = 'e'
+  uchars[i] = "e";
 });
 console.log(uchars);
 
@@ -524,34 +519,126 @@ let char_Counts = (str1) => {
   let uchars = {};
   str1.replace(/\s/g, function (i) {
     uchars[i] = isNaN(uchars[i]) ? 1 : uchars[i] + 1;
-
   });
 };
 
 // console.log(char_Counts('The quick brown fox jumps over the lazy dog'));
-
-
 
 // OBJECTSSS
 
 const myhouse = new Object();
 
 myhouse.size = 55;
-myhouse.location = 'lagos';
-myhouse.energy = function() {
-  console.log('prepaid meter');
-}
-myhouse.energy()
+myhouse.location = "lagos";
+myhouse.energy = function () {
+  console.log("prepaid meter");
+};
+myhouse.energy();
 
 const myhouse5 = {
-  size : 55,
-  location : 'Lekki',
-  colour: 'blue',
-  Area : function(lenght, breadth) {
-    console.log(lenght*breadth);
-  }
+  size: 55,
+  location: "Lekki",
+  colour: "blue",
+  Area: function (lenght, breadth) {
+    console.log(lenght * breadth);
+  },
+};
 
-}
-
-myhouse5.Area(23,42)
+myhouse5.Area(23, 42);
 console.log(myhouse5.size);
+
+let mystacks = {
+  html_: "good",
+  css: "okay",
+  Javascript: "good",
+
+  program: function (l, b) {
+    let area = l * b;
+    console.log(`${area} is ${this.html_}`);
+  },
+};
+// console.log(this.login);
+
+mystacks.program(3, 4);
+
+// constructor func
+
+let bus = function (speed, brand) {
+  this.speed = speed;
+  this.brand = brand;
+  this.driver = function () {
+    console.log("Mr ben");
+  };
+  this.logdrive = function (distance, time) {
+    console.log(`The speed is ${distance / time} m/s`);
+  };
+};
+
+let mybus = new bus(40, "Benz");
+let mybus5 = new bus(50, "Honda");
+console.log(mybus);
+
+mybus.logdrive(10, 5);
+mybus5.logdrive(3, 5);
+mybus5.driver();
+
+mydate = new Date(1987, 1, 6);
+console.log(mydate);
+
+let birthday = new Date(1998, 0, 30, 4, 30, 50);
+
+console.log(birthday.getTime());
+
+const profile = {
+  first_name: "Brown",
+  lastname: "Kemi",
+  age: 28,
+
+  fullname: function () {
+    return this.first_name + " " + this.lastname;
+  },
+};
+
+let boo = profile.fullname();
+
+console.log(boo);
+
+console.log(Array.prototype.pop.call(profile));
+
+console.log(Object.entries(profile));
+
+Object.values(profile).forEach((prop) => {
+  if (prop.length == 5) {
+    console.log(prop);
+  }
+});
+
+console.log(Array.prototype.pop.call(profile));
+
+console.log(profile);
+
+let club = [
+  {
+    Name: "Bayern Munich",
+    Location: "Germany",
+    position: 1,
+    Playing_Ucl: true,
+  },
+  { 
+    Name: 'arsenal',
+    Location: "England", 
+    position: 1, 
+    Playing_Ucl: false
+   },
+];
+
+let man = club.map((pop => {
+  if (pop.Playing_Ucl) {
+    console.log(`${pop.Name} is playing in the ucl`);
+  }
+  else{
+    console.log(`${pop.Name} is not in the ucl`)
+  }
+}))
+
+console.log(man);
