@@ -599,6 +599,10 @@ const profile = {
   },
 };
 
+Object.values(profile).map((jj=> {
+  console.log(jj.length);
+}))
+
 let boo = profile.fullname();
 
 console.log(boo);
@@ -642,3 +646,211 @@ let man = club.map((pop => {
 }))
 
 console.log(man);
+
+// CONSTRUCTOR FUNCTION
+
+const objj = new Object()
+
+objj.namee = 'levy';
+
+
+console.log(objj);
+
+
+
+
+
+// 'Object.create' recreates an object
+
+const objl = Object.create(club)
+
+console.log(objl[0].Name);
+
+// Destructuring
+
+
+
+const{spider, legs} = objj
+
+console.log(objj);
+
+
+// destructuring
+
+let swe = ({namee}) =>{
+  return `my name is ${namee}`
+}
+
+console.log(swe(objj));
+
+
+let objectz = {
+  namme: 'David gyan',
+  sclass: 'VI',
+  rollno: '12',
+
+}
+
+console.log(Object.keys(objectz).length);
+
+let mab = Object.values(objectz)
+
+console.log(objectz.rollno);
+
+delete objectz.rollno
+objectz.hasOwnProperty('rollno')
+
+console.log(objectz);
+
+// console.log(out);
+
+console.log(mab);
+
+
+
+const library = [
+  {
+    author: 'Bill Gates',
+    title: 'The Road Ahead',
+    readingStatus: true
+  },
+  {
+    author: 'Steve Jobs',
+    title: 'The Road Ahead',
+    readingStatus: true
+  },
+  {
+    author: 'Suzanne Collins',
+    title: 'The Road Ahead',
+    readingStatus: false
+  }
+]
+
+const nij = library.map((pop => {
+  if (pop.readingStatus) {
+   return `i have read ${pop.title} by ${pop.author}`
+  }
+  else{
+    return `i have not read ${pop.title} by  ${pop.author} `
+  }
+}))
+
+console.log(nij);
+
+
+class Vol {
+  constructor(radius, height) {
+    this.radius = radius;
+    this.height = height;
+    
+  }
+  get Voll(){
+    return this.calcVol();
+  }
+       
+  calcVol(){
+  return (Math.PI * this.radius ** 2 * this.height).toFixed(2);
+}
+  
+  }
+
+
+let rst =new Vol(5,10)
+console.log(rst.Voll);
+
+class Volv {
+  constructor(secs, minute) {
+    this.secs = secs;
+    this.minute = minute;
+    
+  }
+  get Voll(){
+    return setInterval()
+  }
+       
+  calcVol(){
+  this.secs+= secs;
+  if (this.seconds >= 60) {
+    this.minute++;
+    this.secs = 0;
+  }
+
+}
+  
+  }
+
+  let daaat =  new Date()
+
+  console.log(daaat);
+
+  let datts = new Volv(daaat.getSeconds, daaat.getMinutes)
+
+
+
+  const demography = {
+     firstname5: 'mario',
+     lastname6: 'gini',
+
+     get fullname(){
+       return `${this.firstname5} ${this.lastname6}`
+     },
+
+     set fullname(val) {
+      const part = val.split(' ');
+      this.firstname5 = part[0];
+      this.lastname6 = part[1]
+
+     }
+  }
+
+
+  demography.fullname = 'barry white';
+
+  console.log(demography.fullname);
+
+  const game = {
+    title: 'Atomic Habits',
+    year: 1991,
+  }
+
+  function binder(man) {
+    console.log(`${this.title} was written by ${man}`);
+  }
+
+  binder.call(game, 'jjjj')
+
+
+
+  const gy = binder.bind(game, 'James clear');
+  gy()
+
+
+  let book = {
+    title: 'rich dad',
+    Author: 'james vok',
+
+  }
+
+  function info(year) {
+
+    console.log((`${this.title} was written by ${this.Author} and was released in ${year}`));
+  }
+
+  info.call(book, '2005')
+
+  info.apply(book, ['2008'])
+
+  
+
+  let bb = info.bind(book, '2055')
+  bb()
+
+
+
+
+
+
+
+
+
+
