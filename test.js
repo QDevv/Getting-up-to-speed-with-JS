@@ -848,6 +848,63 @@ class Volv {
 
 
 
+const game6 = {
+    title: 'PS5',
+    Make: 'Sony',
+    year: 2019,
+    Locationn: {
+      country: 'Nigeria',
+      state: 'Lagos'
+    }
+}
+
+let {title,
+   Make: brand,
+   year, 
+   Locationn, 
+   Locationn: {country, state},
+  } = game6
+
+console.log(title, brand, year);
+console.log(Locationn);
+
+const bvv = ['boy', 'girl', 'baby', ['man', 'woman']]
+
+let [title1, title2, title3, [a,b]] = bvv;
+
+console.log(title2);
+console.log(a,b);
+
+
+const Userb = {
+  firstName: 'seye',
+  country: 'Nigeria',
+  year: 55
+  // todos: {
+  //   1:'Do the shopping',
+  //   2: 'Play some games'
+  // }
+}
+// console.log(Object.entries(User.todos));
+
+// let cf = Object.values(User.todos)
+
+let {title22,
+   title33, 
+   yerr}  = Userb;
+console.log(title33);
+
+
+// console.log(User.todos[1]);
+
+
+
+
+let gh = {
+  jkj : 'hdhfd',
+  6 : 'ehej'
+}
+console.log(gh.jkj);
 
 
 
