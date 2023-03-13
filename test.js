@@ -866,33 +866,44 @@ let {title,
   } = game6
 
 console.log(title, brand, year);
+// console.log(title);
 console.log(Locationn);
 
 const bvv = ['boy', 'girl', 'baby', ['man', 'woman']]
 
-let [title1, title2, title3, [a,b]] = bvv;
+// let [title1, title2, title3, [a,b]] = bvv;
 
-console.log(title2);
-console.log(a,b);
+// console.log(title2);
+// console.log(a,b);
 
 
-const Userb = {
+
+
+
+
+
+
+
+let Userb = {
   firstName: 'seye',
   country: 'Nigeria',
-  year: 55
-  // todos: {
-  //   1:'Do the shopping',
-  //   2: 'Play some games'
-  // }
+  yearr: 55,
+  Loccationn: {
+    counttry: 'Nigeria',
+    statte: 'Lagos'
+  }
 }
-// console.log(Object.entries(User.todos));
 
-// let cf = Object.values(User.todos)
+let {firstName,
+    country: placee, 
+    yearr,
+    Loccationn, 
+    Loccationn: {counttry, statte},
+   }  = Userb
 
-let {title22,
-   title33, 
-   yerr}  = Userb;
-console.log(title33);
+   console.log(firstName, country);
+console.log(Loccationn);
+console.log(counttry);
 
 
 // console.log(User.todos[1]);
@@ -905,6 +916,69 @@ let gh = {
   6 : 'ehej'
 }
 console.log(gh.jkj);
+
+
+const User = {
+  firstName5:'Zayd',
+  country5: 'UAE',
+  todos: {
+    1: 'Do the shopping',
+    2: 'Play some games',
+  }
+}
+
+
+let {
+  firstName5,
+  country5,
+  todos,
+  todos: {one, two}
+
+} = User
+
+console.log(firstName5, country5, todos);
+console.log(todos[2]);
+
+let hubby = ['football', 'racing', 'programming',['Java', 'Rust']]
+
+let[H1,H2,H3, [a,b]] = hubby;
+
+console.log(H1, H3, a, b);
+
+
+// closure
+
+const outer = () => {
+  let outerVar = 'outer';
+  console.log(outerVar);
+
+  function inner() {
+    let vcc = 'hdh'
+    console.log(outerVar, vcc);
+  }
+  return inner
+}
+
+let frr = outer()
+
+console.log(frr());
+
+
+let crust = 'crust';
+
+let earth = () => {
+  let mantle = 'mantle';
+
+  function message () {
+    let core = 'core';
+  console.log(`The earth is made up of the ${crust}, the ${mantle} and the ${core}`);
+  }
+  return message
+}
+
+let rstt = earth()
+
+rstt()
 
 
 
