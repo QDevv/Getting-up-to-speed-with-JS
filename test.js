@@ -982,6 +982,20 @@ rstt()
 
 
 
+// NULLISH OPERATOR
+
+// This returns the first defined value
+
+let age = null;
+
+console.log(age ?? 'no age');
+
+
+
+
+
+
+
 
 
 
