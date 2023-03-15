@@ -422,6 +422,7 @@ btn.addEventListener("click", () => {
   console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
 console.log(document.selectForm.musicTypes);
+// console.log(musicTypes.options.selected);
 
 let sttr = "balablu";
 
@@ -989,6 +990,93 @@ rstt()
 let age = null;
 
 console.log(age ?? 'no age');
+
+
+// DOM MANIPULATION
+
+
+let val = 50
+let myFunc = (callBack) => {
+    
+    console.log(callBack);
+     callBack(val)
+}
+// let val = 50;
+
+myFunc(val => {
+    console.log(val);
+})
+
+let people = ['joy', 'ade', 'bisi', 'ada']
+people.forEach(person => console.log(person));
+
+let barca = {
+    Name: 'Barcelona', 
+    Founded: '1899',
+    UCL: 5,
+    leagueTitles: 26,
+    greatestPlayer: 'Messi',
+    legends: ['Messi', 'Ronaldinho', 'cruyff', 'Suarez', 'Iniesta']
+
+}
+
+console.log(barca.Name  );
+
+console.log(barca.Founded);
+barca.Name = 'catalans'
+console.log(barca.Name);
+
+// blogs = [
+//     {Title: 'csc101', likes:56},
+//     {Title: 'algorithm', likes:5},
+//     {Title: 'cloud engineering', likes:65}
+// ]
+
+let user = {
+    Name: 'Bill Joy',
+    Age: '55',
+    email: 'billy@programmer.co.uk',
+    blogs: [
+      {Title: 'csc101', likes:56},
+      {Title: 'algorithm', likes:5},
+      {Title: 'cloud engineering', likes:65}
+    ],  
+    location: 'pennsylvania',
+    login() {
+        console.log('The user logged in');
+        console.log(`my name is ${ this.Name }, i am ${ this.Age } years old. i live in ${this.location} and i am the author of ${this.blogs[0].Title} and ${this.blogs[2].Title}` );
+    },
+
+    logout(day) {
+        console.log(`The user logged out ${day}`);
+    },
+
+    logblogs() {
+        this.blogs.forEach(person => {
+            console.log(person.Title, person.likes);
+        });
+    }
+};
+
+user.login()
+
+user.logout('yesterday')
+
+user.logblogs()
+
+// let length = 10.5;
+// let breadth = 15;
+
+let funcArea = (length, breadth) => Math.round(length*breadth)
+
+
+let areacalc = funcArea(10.5,50.2)
+console.log(areacalc);
+
+let random = Math.random()
+console.log(Math.floor(random*100));
+
+
 
 
 
