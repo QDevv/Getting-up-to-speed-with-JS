@@ -1074,7 +1074,15 @@ let areacalc = funcArea(10.5,50.2)
 console.log(areacalc);
 
 let random = Math.random()
-console.log(Math.floor(random*100));
+console.log(Math.floor(random*100));   
+
+const fn = (a,b) => {
+  if (a == 0) return b
+  if (b == 0) return a
+  return fn(a+1, b-1)
+}
+
+fn(1,3)
 
 
 
