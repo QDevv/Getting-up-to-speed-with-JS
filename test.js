@@ -75,8 +75,8 @@
 //   console.log("The sign is -");
 // }
 
-let codes = prompt('enter the numbers you want to compare',0).split('')
-console.log(codes);
+// let codes = prompt('enter the numbers you want to compare',0).split('')
+// console.log(codes);
 
 // if (codes[0] < codes[1] && codes[1] < codes[2]) {
 //   console.log(`${codes[0]} ${codes[1]} ${codes[2]}`);
@@ -93,233 +93,234 @@ console.log(codes);
 // }
 
 // let findHighest = () => {
-//   if () {
-    
-//   }
+//   codes.sort((a, b) => a-b)
+//   return codes[codes.length -1]
 // } 
+// let highestt = findHighest()
+// console.log(highestt);
 
-console.log(codes.sort((a, b) => a - b));
+// console.log(codes.sort((a, b) => a - b));
 
-let clpss = [0, -5, -1, 2, -6];
+// let clpss = [0, -5, -1, 2, -6];
 
-let highest = clpss.sort((a, b) => b - a);
+// let highest = clpss.sort((a, b) => b - a);
 
-console.log(highest[0]);
+// console.log(highest[0]);
 
-for (let i = 0; i <= 15; i++) {
-  if (i % 2 == 1) {
-    console.log(`${i} is an odd number`);
-  } else {
-    console.log(`${i} is an even number`);
-  }
-}
+// for (let i = 0; i <= 15; i++) {
+//   if (i % 2 == 1) {
+//     console.log(`${i} is an odd number`);
+//   } else {
+//     console.log(`${i} is an even number`);
+//   }
+// }
 
-let arr = [80, 77, 88, 95, 68];
+// let arr = [80, 77, 88, 95, 68];
 
-let avgArr = (arr[0] + arr[1] + arr[2] + arr[3] + arr[4]) / 5;
+// let avgArr = (arr[0] + arr[1] + arr[2] + arr[3] + arr[4]) / 5;
 
-if (avgArr < 60) {
-  console.log("F");
-} else if (avgArr > 60 && avgArr < 70) {
-  console.log("D");
-} else if (avgArr > 70 && avgArr < 80) {
-  console.log("C");
-} else if (avgArr > 80 && avgArr < 90) {
-  console.log("B");
-} else if (avgArr > 90 && avgArr < 100) {
-  console.log("A");
-}
+// if (avgArr < 60) {
+//   console.log("F");
+// } else if (avgArr > 60 && avgArr < 70) {
+//   console.log("D");
+// } else if (avgArr > 70 && avgArr < 80) {
+//   console.log("C");
+// } else if (avgArr > 80 && avgArr < 90) {
+//   console.log("B");
+// } else if (avgArr > 90 && avgArr < 100) {
+//   console.log("A");
+// }
 
-function Declare5(L, B) {
-  let area = L * B;
-  return area;
-}
+// function Declare5(L, B) {
+//   let area = L * B;
+//   return area;
+// }
 
-calcArea = Declare5(4, 5);
-console.log(calcArea);
+// calcArea = Declare5(4, 5);
+// console.log(calcArea);
 
-//    Local and Global variable
+// //    Local and Global variable
 
-let team = "Barca";
+// let team = "Barca";
 
-function check() {
-  console.log(team);
+// function check() {
+//   console.log(team);
 
-  let stage = "initial";
-}
+//   let stage = "initial";
+// }
 
-check();
-// console.log(stage);
+// check();
+// // console.log(stage);
 
-let vox = "56ty";
-console.log(vox[3]);
-console.log(vox.length);
+// let vox = "56ty";
+// console.log(vox[3]);
+// console.log(vox.length);
 
-let nnum = prompt("input Number", 0);
-console.log(nnum.length);
+// let nnum = prompt("input Number", 0);
+// // console.log(nnum.length);
 
-let reverseNumber = (gt, nnum) => {
-  if (gt == 0) return "";
+// let reverseNumber = (gt) => {
+//   if (gt == 0) return "";
 
-  return nnum[gt - 1] + reverseNumber(gt - 1, nnum);
-};
+//   return nnum[gt - 1] + reverseNumber(gt - 1);
+// };
 
-console.log(reverseNumber(nnum.length, nnum));
+// console.log(reverseNumber(nnum.length));
 
-// Math Operators
+// // Math Operators
 
-console.log(Math.ceil(4.6));
+// console.log(Math.ceil(4.6));
 
-let pal = prompt("type word");
+// let pal = prompt("type word");
 
-let funcPalindrome = (dt, pal) => {
-  if (dt == 0) return "";
+// let funcPalindrome = (dt) => {
+//   if (dt == 0) return "";
 
-  return pal[dt - 1] + funcPalindrome(dt - 1, pal);
-};
+//   return pal[dt - 1] + funcPalindrome(dt - 1);
+// };
 
-let checkPal = funcPalindrome(pal.length, pal);
+// let checkPal = funcPalindrome(pal.length);
 
-if (checkPal == pal) {
-  console.log(`${pal} is a palindrome`);
-} else {
-  console.log(`${pal} is not a palindrome`);
-}
+// if (checkPal == pal) {
+//   console.log(`${pal} is a palindrome`);
+// } else {
+//   console.log(`${pal} is not a palindrome`);
+// }
 
-let animal = "dog";
-console.log(
-  `${animal.split("")[0]}, ${animal.split("")[1]}, ${animal.split("")[2]}, ${
-    animal.split("")[0] + animal.split("")[1]
-  }, ${animal.split("")[1] + animal.split("")[2]}, ${
-    animal.split("")[0] + animal.split("")[1] + animal.split("")[2]
-  }`
-);
+// let animal = "dog";
+// console.log(
+//   `${animal.split("")[0]}, ${animal.split("")[1]}, ${animal.split("")[2]}, ${
+//     animal.split("")[0] + animal.split("")[1]
+//   }, ${animal.split("")[1] + animal.split("")[2]}, ${
+//     animal.split("")[0] + animal.split("")[1] + animal.split("")[2]
+//   }`
+// );
 
-let multilate = () => {
-  animal.split("")[0],
-    animal.split("")[1],
-    animal.split("")[2],
-    animal.split("")[0] + animal.split("")[1],
-    animal.split("")[1] + animal.split("")[2],
-    animal.split("")[0] + animal.split("")[1] + animal.split("")[2];
-};
+// let multilate = () => {
+//   animal.split("")[0],
+//     animal.split("")[1],
+//     animal.split("")[2],
+//     animal.split("")[0] + animal.split("")[1],
+//     animal.split("")[1] + animal.split("")[2],
+//     animal.split("")[0] + animal.split("")[1] + animal.split("")[2];
+// };
 
-console.log(multilate());
+// console.log(multilate());
 
-let arrange = prompt('Type a word')
-console.log(arrange.split("").sort().join(''));
+// let arrange = prompt('Type a word')
+// console.log(arrange.split("").sort().join(''));
 
-let arrangeAlpha = () => {
-   arrange.split("").sort()
-}
+// let arrangeAlpha = () => {
+//    arrange.split("").sort()
+// }
 
-console.log(arrangeAlpha());
+// console.log(arrangeAlpha());
 
-const points = [40, 100, 1, 5, 47, 66];
+// const points = [40, 100, 1, 5, 47, 66];
 
-let funcSORT = points.sort((a, b) => a-b)
+// let funcSORT = points.sort((a, b) => a-b)
 
-console.log(funcSORT);
+// console.log(funcSORT);
 
-let cap = prompt(['type a sentence']).split(' ')
-console.log(cap);
-let deed = 0;
+// let cap = prompt('type a sentence').split(' ')
+// console.log(cap);
+// let deed = 0;
 
-const pp = cap[deed][0].toUpperCase() + cap[deed].slice(1, cap[deed].length)
-// console.log(cap[0].slice(1,3));
-console.log(pp);
+// const pp = cap[deed][0].toUpperCase() + cap[deed].slice(1, cap[deed].length)
+// // console.log(cap[0].slice(1,3));
+// console.log(pp);
 
-let xs = ['how', 'are', 'you']
-let gv = xs[2].slice(0,3)
-console.log(gv);
-let amm = xs[0][0]
-console.log(typeof amm);
+// let xs = ['how', 'are', 'you']
+// let gv = xs[2].slice(0,3)
+// console.log(gv);
+// let amm = xs[0][0]
+// console.log(typeof amm);
 
-console.log(Number.isInteger(deed));
+// console.log(Number.isInteger(deed));
 
-console.log(xs[0][0].toUpperCase() + xs[0].slice(1,3));
-console.log(xs);
+// console.log(xs[0][0].toUpperCase() + xs[0].slice(1,3));
+// console.log(xs);
 
-let funcCap = (ded) => {
-    if (ded == cap.length ) return '';
+// let funcCap = (ded) => {
+//     if (ded == cap.length ) return '';
 
-    return cap[ded][0].toUpperCase() + cap[ded].slice(1, cap[ded].length) + ' ' + funcCap(ded + 1)
+//     return cap[ded][0].toUpperCase() + cap[ded].slice(1, cap[ded].length) + ' ' + funcCap(ded + 1)
 
-}
+// }
 
-const capitalize = funcCap(0)
-console.log(capitalize);
+// const capitalize = funcCap(0)
+// console.log(capitalize);
 
-let alpha = prompt('Type a word').split('')
+// let alpha = prompt('Type a word').split('')
 
-console.log(alpha );
+// console.log(alpha );
 
-let arrAlpha = alpha.sort().join('')
+// let arrAlpha = alpha.sort().join('')
 
-console.log(arrAlpha);
+// console.log(arrAlpha);
 
-let capitalizer = prompt('Type a word').split(' ')
-console.log(capitalizer);
-console.log(typeof capitalizer[0][0].toUpperCase());
-console.log(typeof capitalizer[0].slice(1));
-console.log( capitalizer[0][0].toUpperCase() + capitalizer[0].slice(1) + ' ' + capitalizer[1][0].toUpperCase() + capitalizer[1].slice(1) );
+// let capitalizer = prompt('Type aa word').split(' ').join()
+// console.log(capitalizer);
+// console.log(typeof capitalizer[0][0].toUpperCase());
+// console.log(typeof capitalizer[0].slice(1));
+// console.log( capitalizer[0][0].toUpperCase() + capitalizer[0].slice(1) + ' ' + capitalizer[1][0].toUpperCase() + capitalizer[1].slice(1) );
 
-let funcCapitalize = (pas) => {
-   if (capitalizer.length == pas) return "";
+// let funcCapitalize = (pas) => {
+//    if (capitalizer.length == pas) return "";
 
- return capitalizer[pas][0].toUpperCase() + capitalizer[pas].slice(1) + ' ' + funcCapitalize(pas + 1)
-}
+//  return capitalizer[pas][0].toUpperCase() + capitalizer[pas].slice(1) + ' ' + funcCapitalize(pas + 1)
+// }
 
-let dcv = funcCapitalize(0)
-console.log(dcv);
+// let dcv = funcCapitalize(0)
+// console.log(dcv);
 
-let Longest = prompt('Type a word').split(' ').sort((a, b) => b.length -a.length)[0]
+// let Longest = prompt('Type a word').split(' ').sort((a, b) => b.length -a.length)[0]
 
-console.log(Longest);
+// console.log(Longest);
 
-let funcLongest = (long) => {
-  if (Longest.length == long) {
+// let funcLongest = (long) => {
+//   if (Longest.length == long) {
 
-  }
-  return Longest[long] + funcLongest(long + 1)
-}
-let ab = 2;
-let vc = 5
-if (ab != vc) {
-  vc = 8;
+//   }
+//   return Longest[long] + funcLongest(long + 1)
+// }
+// let ab = 2;
+// let vc = 5
+// if (ab != vc) {
+//   vc = 8;
 
-  if (vc == 8) ab++;
+//   if (vc == 8) ab++;
 
-  console.log(ab);
+//   console.log(ab);
 
-}
+// }
 
-let hm = 3;
-let vw = 0;
-let vowell = ['aod', 'abv']
+// let hm = 3;
+// let vw = 0;
+// let vowell = ['aod', 'abv']
 
-if (hm != vowell[vw].length) {
-  vw = 0;
-  console.log('vw is 00');
+// if (hm != vowell[vw].length) {
+//   vw = 0;
+//   console.log('vw is 00');
 
- }
+//  }
 
- if (hm == vowell[vw].length ) {
-   hm = 0;
-   vw = 1;
-   console.log('hm is 0');
- }
+//  if (hm == vowell[vw].length ) {
+//    hm = 0;
+//    vw = 1;
+//    console.log('hm is 0');
+//  }
 
- if (vowell[vw][hm] == 'a' || vowell[vw][hm] == 'e' || vowell[vw][hm] == 'i' || vowell[vw][hm] == 'o' || vowell[vw][hm] == 'u') {
-   let neww = 5;
-   console.log(++neww);
-   console.log(vw);
- }
+//  if (vowell[vw][hm] == 'a' || vowell[vw][hm] == 'e' || vowell[vw][hm] == 'i' || vowell[vw][hm] == 'o' || vowell[vw][hm] == 'u') {
+//    let neww = 5;
+//    console.log(++neww);
+//    console.log(vw);
+//  }
 //  if (vw == vowell.length)
 
 
 let vowelFind = (sstr) => {
- const count = sstr.match(/[aeiou]/gi).length
+ const count = sstr.match(/[aeiou]/gi) .length
 
  return count;
 }
