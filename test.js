@@ -1096,6 +1096,44 @@ fn(1,3)
 
 
 
+class myClock {
+  constructor() {
+     this.Date5 = new Date()
+     this.hours = this.Date5.getHours();
+     this.minutes = this.Date5.getMinutes();
+     this.sec = this.Date5.getSeconds();
+     console.log(this.sec);
+  }
+  run() {
+    setInterval(this.update.bind(this), 1000)
+  };
+  update() {
+    this.updateTime();
+    console.log(this.hours + ':' + this.minutes + ':' + this.sec);
+  }
+
+  updateTime(){
+    
+    this.sec += 1;
+    if (this.sec >= 60) {
+      this.minutes++;
+      this.sec = 0;
+    }
+    if (this.minutes >= 60) {
+      this.hours++;
+      this.minutes = 0;
+    }
+    if (this.hours >= 24) {
+      this.hours = 0;
+    }
+  }
+
+
+}
+
+
+
+
 
 
 
