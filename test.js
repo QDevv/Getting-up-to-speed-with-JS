@@ -1106,40 +1106,82 @@ fn(1,3)
 
 
 
-class myClock {
-  constructor() {
-     this.Date5 = new Date()
-     this.hours = this.Date5.getHours();
-     this.minutes = this.Date5.getMinutes();
-     this.sec = this.Date5.getSeconds();
-     console.log(this.sec);
-  }
-  run() {
-    setInterval(this.update.bind(this), 1000)
-  };
-  update() {
-    this.updateTime();
-    console.log(this.hours + ':' + this.minutes + ':' + this.sec);
-  }
+// class myClock {
+//   constructor() {
+//      this.Date5 = new Date()
+//      this.hours = this.Date5.getHours();
+//      this.minutes = this.Date5.getMinutes();
+//      this.sec = this.Date5.getSeconds();
+//      console.log(this.sec);
+//   }
+//   run() {
+//     setInterval(this.update.bind(this), 1000)
+//   };
+//   update() {
+//     this.updateTime();
+//     console.log(this.hours + ':' + this.minutes + ':' + this.sec);
+//   }
 
-  updateTime(){
+//   updateTime(){
     
-    this.sec += 1;
-    if (this.sec >= 60) {
-      this.minutes++;
-      this.sec = 0;
-    }
-    if (this.minutes >= 60) {
-      this.hours++;
-      this.minutes = 0;
-    }
-    if (this.hours >= 24) {
-      this.hours = 0;
-    }
+//     this.sec += 1;
+//     if (this.sec >= 60) {
+//       this.minutes++;
+//       this.sec = 0;
+//     }
+//     if (this.minutes >= 60) {
+//       this.hours++;
+//       this.minutes = 0;
+//     }
+//     if (this.hours >= 24) {
+//       this.hours = 0;
+//     }
+//   }
+
+
+
+  let animals = ['cats', 'dogs', 'cows', 'goats']
+  let hg = 'shsgfs'
+
+  let upperCasee = (val) => {
+  return val.toUpperCase()
   }
+  
+
+  let result = upperCasee(animals[0])
+  let resultt = animals.map(upperCasee)
+  console.log(resultt);
+
+  console.log(animals);
 
 
+// }
+
+const fruits = ['apple', 'orange', 'banana']
+
+// let alertFruit = (val) => {
+//   alert(val)
+// }
+
+// let frt = fruits.forEach(alertFruit)
+
+let setToUppercase = (val) => {
+  return val.toUpperCase()
 }
+
+let upp = fruits.map(setToUppercase)
+console.log(upp);
+
+let findLength = (val) => {
+  return val.length > 3;
+  
+}
+
+let checklenght = fruits.every(findLength)
+
+console.log(checklenght);
+
+
 
 
 
