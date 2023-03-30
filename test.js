@@ -453,12 +453,7 @@ function nbn() {
       console.log(`${sttr[4]} occured ${nedd} times`);
     }
   
-    if (sttr[0] == sttr[i] && sttr.indexOf(sttr[0]) != sttr.indexOf(sttr[i])) {
-      console.log(sttr[0]);
-      let nedd = [];
-      nedd.push(sttr[0]);
-      console.log(`${sttr[0]} occured ${nedd.length} times`);
-    }
+   
   }
 }
 nbn()
@@ -510,7 +505,7 @@ console.log(reslt);
 // SEARCH FOR WHITESPACE CHARACTERS IN A STRING
 
 let strrr = "how have you been";
-let rsltt = strrr.replace(/\S/g, "s");
+let rsltt = strrr.replace(/\S/g, "v");
 
 console.log(rsltt);
 
@@ -529,8 +524,39 @@ console.log(uchars["namee"]);
 
 "the eth".replace(/\S/g, function oof(i) {
   uchars[i] = "e";
+  
 });
 console.log(uchars);
+
+let quote = 'What goes around comes around';
+
+let rgx = () => {
+  let r = /\b\w+\b/g;
+
+  let s = quote.replace(r, '$')
+  console.log(s);
+
+
+}
+
+function replacer(para) {
+  if (para == 'goes' ) {
+    return 'comes';
+  }
+  if (para == 'comes') {
+    return 'goes';
+  }
+  else{
+    return para
+  }
+}
+
+rgx()
+
+
+
+
+
 
 //  Find the Unicode character specified by the hexadecimal number xxxx
 
@@ -543,7 +569,7 @@ let char_Counts = (str1) => {
   });
 };
 
-// console.log(char_Counts('The quick brown fox jumps over the lazy dog'));
+console.log(char_Counts('The quick brown fox jumps over the lazy dog'));
 
 // OBJECTSSS
 
@@ -1180,6 +1206,10 @@ let findLength = (val) => {
 let checklenght = fruits.every(findLength)
 
 console.log(checklenght);
+
+
+
+
 
 
 
