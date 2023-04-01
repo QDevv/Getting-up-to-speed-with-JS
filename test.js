@@ -553,6 +553,22 @@ function replacer(para) {
 
 rgx()
 
+function replace(para) {
+  if (para == 'goes' ) {
+    return 'comes';
+  }
+  if (para == 'comes') {
+    return 'goes';
+  }
+  else{
+    return para
+  }
+}
+
+replace()
+
+
+
 
 
 
