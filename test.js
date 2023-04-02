@@ -574,6 +574,8 @@ replace()
 
 
 
+
+
 //  Find the Unicode character specified by the hexadecimal number xxxx
 
 // CHECK NUMBER OF OCCURRENCE
@@ -1207,11 +1209,16 @@ const fruits = ['apple', 'orange', 'banana']
 
 // let frt = fruits.forEach(alertFruit)
 
-let setToUppercase = (val) => {
-  return val.toUpperCase()
-}
+// let setToUppercase = (val) => {
+  
+// }
 
-let upp = fruits.map(setToUppercase)
+let upp = fruits.map((val => {
+  if (val.length == 5) {
+  return val.toUpperCase()
+  }
+  return val
+}))
 console.log(upp);
 
 let findLength = (val) => {
