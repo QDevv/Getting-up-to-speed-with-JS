@@ -1231,9 +1231,31 @@ let checklenght = fruits.every(findLength)
 console.log(checklenght);
 
 
+// MAP EXERCISE
 
+const input = [1, 2, 3, 4, 5];
 
+let allSquared = input.map(all => {
+  return all**2;
+})
 
+console.log(allSquared);
+
+const input1 = [1, -4, 12, 0, -3, 29, -150];
+const chckpositive = input1.filter(pos => {
+  if (pos >= 1) {
+    return pos
+  }
+})
+console.log(chckpositive);
+
+let allPositive = chckpositive.reduce((accumulator, pos)=> {
+
+    return pos + accumulator;
+  
+}, 0)
+
+console.log(allPositive);
 
 
 
