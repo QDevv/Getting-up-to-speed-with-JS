@@ -207,8 +207,8 @@
 
 // console.log(multilate());
 
-// let arrange = prompt('Type a word')
-// console.log(arrange.split("").sort().join(''));
+let arrange = 'live'
+console.log(arrange.split("").sort().join(''));
 
 // let arrangeAlpha = () => {
 //    arrange.split("").sort()
@@ -519,11 +519,18 @@ let sdd = "she has two eggs";
 let temm = [...sdd];
 console.log(temm);
 
+
+// const poss = {
+//   key: 'value',
+//   age: 55
+// }
+// console.log(poss[i]);
+
 let uchars = {};
 console.log(uchars["namee"]);
 
-"the eth".replace(/\S/g, function oof(i) {
-  uchars[i] = "e";
+"the efg".replace(/\S/g, function oof(i) {
+  uchars[i] = isNaN(uchars[i]) ? 1 : uchars[i] + 1;
   
 });
 console.log(uchars);
@@ -572,7 +579,7 @@ replace()
 
 
 
-
+console.log(isNaN(undefined));
 
 
 
@@ -581,15 +588,19 @@ replace()
 // CHECK NUMBER OF OCCURRENCE
 
 let char_Counts = (str1) => {
-  let uchars = {};
+  let ucharsz = {};
   str1.replace(/\s/g, function (i) {
-    uchars[i] = isNaN(uchars[i]) ? 1 : uchars[i] + 1;
+    ucharsz[i] = isNaN(ucharsz[i]) ? 1 : ucharsz[i] + 1;
   });
 };
 
 console.log(char_Counts('The quick brown fox jumps over the lazy dog'));
 
 // OBJECTSSS
+
+
+
+
 
 const myhouse = new Object();
 
@@ -700,6 +711,7 @@ let club = [
     Playing_Ucl: false
    },
 ];
+console.log(club);
 
 let man = club.map((pop => {
   if (pop.Playing_Ucl) {
@@ -729,7 +741,7 @@ console.log(objj);
 
 const objl = Object.create(club)
 
-console.log(objl[0].Name);
+console.log(objl[1].Name);
 
 // Destructuring
 
@@ -742,11 +754,13 @@ console.log(objj);
 
 // destructuring
 
-let swe = ({namee}) =>{
+let swe = ({  namee}) =>{
   return `my name is ${namee}`
 }
 
 console.log(swe(objj));
+
+console.log(objj['namee']);
 
 
 let objectz = {
@@ -763,7 +777,7 @@ let mab = Object.values(objectz)
 console.log(objectz.rollno);
 
 delete objectz.rollno
-objectz.hasOwnProperty('rollno')
+console.log(objectz.hasOwnProperty('rollno'));
 
 console.log(objectz);
 
@@ -849,6 +863,7 @@ class Volv {
   console.log(daaat);
 
   let datts = new Volv(daaat.getSeconds, daaat.getMinutes)
+  console.log(datts);
 
 
 
@@ -862,6 +877,7 @@ class Volv {
 
      set fullname(val) {
       const part = val.split(' ');
+      console.log(part);
       this.firstname5 = part[0];
       this.lastname6 = part[1]
 
@@ -881,6 +897,14 @@ class Volv {
   function binder(man) {
     console.log(`${this.title} was written by ${man}`);
   }
+
+  function cx  (vc) {
+    console.log(`${vc} was born in ${this.year}`);
+  }
+  cx.call(game, 'david')
+
+  const dcc = cx.bind(game, 'Melvin')
+  dcc()
 
   binder.call(game, 'jjjj')
 
@@ -969,6 +993,7 @@ let {firstName,
    console.log(firstName, country);
 console.log(Loccationn);
 console.log(counttry);
+console.log(placee, statte);
 
 
 // console.log(User.todos[1]);
@@ -1002,7 +1027,7 @@ let {
 } = User
 
 console.log(firstName5, country5, todos);
-console.log(todos[2]);
+console.log(todos[1]);
 
 let hubby = ['football', 'racing', 'programming',['Java', 'Rust']]
 
@@ -1026,7 +1051,7 @@ const outer = () => {
 
 let frr = outer()
 
-console.log(frr());
+frr();
 
 
 let crust = 'crust';
@@ -1055,16 +1080,94 @@ let age = null;
 
 console.log(age ?? 'no age');
 
+let course;
+
+console.log(course ?? 'pls select a course');
+
 
 // DOM MANIPULATION
 
 
 let val = 50
+
+let anotherFunc = () => {
+  console.log('Finalll!!');
+}
+
+//CALLBACK FUNCTION
+
+function fisrtAction(Messi) {
+  console.log('this is the first action');
+  // setTimeout(secondAction, 3000)
+
+
+
+  setTimeout(Messi, 7000)
+}
+
+function secondAction(text) {
+  console.log('this is the second action ');
+  // console.log(text);
+  setTimeout(text, 11000)
+}
+
+setTimeout(() => fisrtAction(() => secondAction(anotherFunc)), 5000)
+
+let isTruthy = (gn) => {
+  
+  if (gn > 0) {
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+let cf = isTruthy(4)
+let vd = isTruthy(-7)
+
+console.log(cf);
+console.log(vd);
+
+let shn = (tt) => {
+  return `${tt}!`
+}
+bh = shn('Tayo');
+vv = shn(shn('Tayo'));
+
+console.log(bh, vv);
+
+let doublee = (str) => {
+
+ console.log(str.split('')
+  );
+  str.split('').map(val => {
+    if (val == val ) {
+      let ms = `${val}${val}`
+      const all = [...ms]
+      console.log(all);
+      // console.log(ms.split(''));
+    }
+   
+    // if (val[i] == val ) {
+    //   console.log( (val[i] + val).split('').join(''));
+    // }
+  })
+
+}
+
+doublee('xavi')
+
+console.log(bb);
+
+
 let myFunc = (callBack) => {
     
     console.log(callBack);
      callBack(val)
 }
+
+
 // let val = 50;
 
 myFunc(val => {
@@ -1256,6 +1359,8 @@ let allPositive = chckpositive.reduce((accumulator, pos)=> {
 }, 0)
 
 console.log(allPositive);
+
+
 
 
 
