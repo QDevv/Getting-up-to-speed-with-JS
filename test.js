@@ -1141,11 +1141,10 @@ let doublee = (str) => {
 
  console.log(str.split('')
   );
-  str.split('').map(val => {
+  str.split(' ').map(val => {
+    console.log(val.split(''))
     if (val == val ) {
-      let ms = `${val}${val}`
-      const all = [...ms]
-      console.log(all);
+    
       // console.log(ms.split(''));
     }
    
