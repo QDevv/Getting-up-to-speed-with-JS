@@ -730,6 +730,8 @@ const objj = new Object()
 
 objj.namee = 'levy';
 
+objj.age = 41;
+
 
 console.log(objj);
 
@@ -741,7 +743,7 @@ console.log(objj);
 
 const objl = Object.create(club)
 
-console.log(objl[1].Name);
+console.log(objl[0].Name);
 
 // Destructuring
 
@@ -754,8 +756,8 @@ console.log(objj);
 
 // destructuring
 
-let swe = ({  namee}) =>{
-  return `my name is ${namee}`
+let swe = ({namee,age}) =>{
+ return `my name is ${namee} and i am ${age} years old`
 }
 
 console.log(swe(objj));
@@ -819,7 +821,7 @@ console.log(nij);
 
 class Vol {
   constructor(radius, height) {
-    this.radius = radius;
+    this.radiu = radius;
     this.height = height;
     
   }
@@ -828,7 +830,7 @@ class Vol {
   }
        
   calcVol(){
-  return (Math.PI * this.radius ** 2 * this.height).toFixed(2);
+  return (Math.PI * this.radiu ** 2 * this.height).toFixed(2);
 }
   
   }
@@ -1012,7 +1014,7 @@ const User = {
   firstName5:'Zayd',
   country5: 'UAE',
   todos: {
-    1: 'Do the shopping',
+    ll: 'Do the shopping',
     2: 'Play some games',
   }
 }
@@ -1027,7 +1029,7 @@ let {
 } = User
 
 console.log(firstName5, country5, todos);
-console.log(todos[1]);
+console.log(todos['ll']);
 
 let hubby = ['football', 'racing', 'programming',['Java', 'Rust']]
 
@@ -1050,8 +1052,7 @@ const outer = () => {
 }
 
 let frr = outer()
-
-frr();
+frr()
 
 
 let crust = 'crust';
@@ -1089,6 +1090,7 @@ console.log(course ?? 'pls select a course');
 
 
 let val = 50
+
 
 let anotherFunc = () => {
   console.log('Finalll!!');
@@ -1143,9 +1145,8 @@ let doublee = (str) => {
   );
   str.split(' ').map(val => {
     console.log(val.split(''))
-    if (val == val ) {
-    
-      // console.log(ms.split(''));
+    if (true) {
+      console.log((val[0] + val[0] + val[1] + val[1] + val[2] + val[2] + val[3] + val[3]));
     }
    
     // if (val[i] == val ) {
