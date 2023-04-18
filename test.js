@@ -1249,7 +1249,8 @@ const fn = (a,b) => {
   return fn(a+1, b-1)
 }
 
-fn(1,3)
+let output = fn(1,3)
+console.log(output);
 
 
 
@@ -1325,7 +1326,7 @@ let upp = fruits.map((val => {
 console.log(upp);
 
 let findLength = (val) => {
-  return val.length > 3;
+  return val.length > 5;
   
 }
 
@@ -1359,6 +1360,290 @@ let allPositive = chckpositive.reduce((accumulator, pos)=> {
 }, 0)
 
 console.log(allPositive);
+
+
+
+
+// DOM DOM DOM
+
+
+document.body.style.backgroundColor = 'red';
+const btn = document.getElementsByTagName('button')
+
+btn[1].style.backgroundColor = 'blue';
+console.log(btn);
+
+//getelementid('element)== make sure the id matches
+// we can assign 2a variable or go straight
+
+
+// document.getElementById('title').style.color = 'red'
+
+// let text = document.getElementById('title')
+// text.style.color = 'purple'
+
+
+
+// let btn = document.getElementById('btn')
+
+// btn.style.backgroundColor = 'red';
+
+
+
+const Header = document.getElementsByTagName('h2')
+Header[4].style.color = 'green';
+console.log(Header);
+
+
+const listitems = document.getElementsByTagName('li')
+listitems[1].style.color = 'blue';
+console.log(listitems);
+
+const headColor = document.querySelector('.colors')
+headColor.style.color = 'white'
+console.log( listitems);
+
+const koretitems = [... listitems]
+console.log( koretitems);
+
+koretitems.forEach((item) => {
+    console.log(item);
+})
+
+// getElementByClassName('className')
+// with className we can select multiple elements, we wud gt a nodeList
+// select the element or grp of elemnt u want
+// decide the effect u wnt to d selction
+// you can use forEach on a nodelist but not an html collection
+// index, length, propties, but not all array ,methods
+
+
+let itemslistn = document.getElementsByClassName('special')
+
+console.log(itemslistn);
+
+itemslistn[1].style.color = 'violet'
+console.log(itemslistn[1]);
+
+// OUr last 2 method(selectors)
+// -select d Element or grp of Elementu wnt
+// decide the effect u wnt to apply to d selection
+
+// querySelector('any css') ---selects single elements
+// querySelectorALL('any css')--- selects all, forEach wud work here
+
+const anotherItem = document.querySelectorAll('.special')
+console.log(anotherItem);
+
+anotherItem.forEach(city =>city.style.color = 'white' )
+
+const peoplebcg = document.querySelector('#title')
+console.log(peoplebcg);
+console.log(peoplebcg.innerText);
+
+peoplebcg.innerText = 'this is good'
+
+peoplebcg.innerHTML += ' chai'
+
+console.log(peoplebcg);
+
+
+
+// let lsrr = document.querySelectorAll('.special')
+
+// lsrr.forEach(item => {
+//     item.style.color = 'yellow'
+// })
+
+let para = document.querySelectorAll('p');
+
+console.log(para.innerText);
+para[3].innerText = 'Blessing is here'
+console.log(para[3].innerText);
+
+//textcontent
+
+let newheader = document.querySelector('h5')
+
+console.log(newheader.textContent);
+
+newheader.innerText += ' Qdevv'
+console.log(newheader.innerHTML);
+
+
+
+const change = document.querySelector('.html')
+console.log(change.innerHTML);
+
+change.innerHTML = '<h1>we finally run am<h1>'
+console.log(change.innerHTML);
+
+
+const link = document.querySelector('a')
+console.log(link.getAttribute('href'));
+
+link.innerText = 'facebook website'
+
+link.setAttribute('href', 'https://facebook.com')
+console.log(link);
+
+const lk = document.querySelector('.an')
+lk.innerHTML = 'Twitter'
+lk.setAttribute('href', 'Twitter.com')
+console.log(lk.getAttribute('href'));
+
+console.log(lk);
+// console.log();
+
+
+
+let divv = document.querySelector('.an')
+console.log(divv.getAttribute('href'));
+
+
+let lst = document.querySelector('.last')
+console.log(lst);
+lst.style.color = 'white'
+
+
+const first = document.getElementById('first')
+const second = document.getElementById('second')
+const third = document.getElementById('third')
+
+
+const classvalue = first.className
+console.log(classvalue);
+
+//classlist
+third.classList.add('colors')
+// third.classList.remove('colors')
+
+
+let $result = third.classList.contains('colors')
+
+if($result){
+    console.log('hello world');
+}
+else{
+    console.log('doesnt have the class');
+
+}
+
+let talk = $result ? 'hello world': 'doesnt have d class'
+console.log(talk);
+
+
+//Events
+//select element
+//addEventListener()
+//what event, what to do
+const Bbtn = document.querySelector('.bttn');
+const headd = document.querySelectorAll('h2');
+
+console.log(headd[1].innerHTML);
+
+function changecolor(){
+    // let hasclass = headd[1].classList.contains('blue')
+    // if(hasclass) {
+    //     headd[1].classList.remove('blue')
+    // }
+    // else{
+    //     headd[1].classList.add('blue')
+    // }
+
+    headd[1].classList.toggle('blue')
+
+}
+
+Bbtn.addEventListener('click', changecolor)
+
+// let pause = () => {
+//     clearInterval(my)
+//     b3.innerHTML = 'CONTINUE'
+//   }
+//   b3.addEventListener('click', pause)
+  
+//   const continues = () => {
+//   if (b3.innerHTML == 'CONTINUE') {
+//       setInterval(() => {
+//           sec.innerHTML++
+//   }, 1000)
+//   }
+//   }
+  
+//   b3.addEventListener('click',continues)
+
+
+
+
+
+
+
+
+const fr = ['one', 'two', 'three', 'four']
+
+console.log();
+  
+
+// DOM 
+
+let ded = document.getElementById('title');
+
+// ded.innerHTML = 'React Dev'
+
+let newLi = document.createElement('li');
+
+console.log(newLi);
+
+newLi.innerHTML = 'Delta';
+
+let uL = document.getElementsByClassName('all')[0]
+console.log(uL);
+
+let child = uL.getElementsByTagName('li')[3]
+console.log(child);
+
+uL.appendChild(newLi)
+
+console.log(uL);
+
+
+uL.removeChild(child)
+
+console.log(uL);
+
+
+
+let lasst = document.querySelector(".last")
+
+const blackk = (document.querySelectorAll('a'))
+
+blackk.forEach(element => {
+    element.classList.add('text')
+});
+
+
+
+// let vv = blackk.forEach(val => val.innerText)
+// console.log(vv);
+
+// changecolorr(blackk)
+ 
+// function changecolorr(element) {
+//     element.classList.add('text')
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
