@@ -1582,7 +1582,7 @@ Bbtn.addEventListener('click', changecolor)
 
 const fr = ['one', 'two', 'three', 'four']
 
-console.log();
+// console.log();
   
 
 // DOM 
@@ -1614,13 +1614,13 @@ console.log(uL);
 
 
 
-let lasst = document.querySelector(".last")
+// let lasst = document.querySelector(".last")
 
-const blackk = (document.querySelectorAll('a'))
+// const blackk = (document.querySelectorAll('a'))
 
-blackk.forEach(element => {
-    element.classList.add('text')
-});
+// blackk.forEach(element => {
+//     element.classList.add('text')
+// });
 
 
 
@@ -1638,6 +1638,75 @@ blackk.forEach(element => {
 
 
 
+
+let lasst = document.querySelector(".last")
+
+const blackk = (document.querySelectorAll('a'))
+
+// blackk.forEach(element => {
+//     element.classList.add('text')
+// });
+
+let lrm = document.querySelector('.lorem')
+
+let newLorem = document.getElementById('content')
+console.log(newLorem);
+ 
+// let clearLorem = lrm.getElementsByTagName('p')[0]
+
+
+let expand = document.getElementById('expand');
+console.log(expand);
+
+fucnExpand = () => {
+    if (newLorem.className == 'open') {
+        // shrink the box
+        newLorem.className = "";
+        expand.innerHTML = 'Show More'
+
+        
+    }
+    else{
+        // expand the box
+        newLorem.className = 'open';
+        expand.innerHTML = 'Show less'
+    }
+    
+}
+
+expand.addEventListener('click', fucnExpand)
+
+
+
+// DOM SAMPLE////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let vv = blackk.forEach(val => val.innerText)
+// console.log(vv);
+
+// changecolorr(blackk)
+// function changecolorr(element) {
+//     element.classList.add('text')
+// }
+
+
+
+
+
+// CLICK EVENTS onclick
 
 
 
