@@ -5,3 +5,92 @@
 .danger{
     color: red;
 }
+body{
+    background: #eee;
+}
+
+#content{
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    padding-top: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: #444;
+    margin: 0 auto;
+
+    max-height: 270px;
+    overflow: hidden;
+
+    /* transition */
+
+    -webkit-transition: max-height 0.7s;
+    -moz-transition: max-height 0.7s;
+    transition: max-height 0.7s;
+}
+#content.open{
+    max-height: 1000px;
+
+    -webkit-transition: max-height 0.7s;
+    -moz-transition: max-height 0.7s;
+    transition: max-height 0.7s;
+}
+
+#show-more{
+    background: #1594e5;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    width:150px ;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+#message{
+    width: 90px;
+    background: #ddaaaa;
+    padding: 20px;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: #444;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ff7777;
+    font-weight: bold;
+    opacity: 0;
+
+    /* set transitions up */
+
+    -webkit-transition: opacity 0.7s;
+    -moz-transition: opacity 0.7s;
+    transition: opacity 0.7s;
+
+}
+#message.show{
+ opacity: 1;
+
+ /* set transition up */
+ /* -webkit-transition: opacity 0.7s;
+ -moz-transition: opacity 0.7s;
+ transition: opacity 0.7s; */
+
+}
+
+#colour-changer{
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    border: 1px solid #000;
+    background: #fff;
+    -webkit-transition: background 0.7s;
+    -moz-transition: background 0.7s;
+    transition: background 0.7s;
+}
+

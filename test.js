@@ -1582,7 +1582,7 @@ Bbtn.addEventListener('click', changecolor)
 
 const fr = ['one', 'two', 'three', 'four']
 
-// console.log();
+// console.log();       
   
 
 // DOM 
@@ -1679,6 +1679,74 @@ expand.addEventListener('click', fucnExpand)
 
 
 // DOM SAMPLE////
+
+
+let setupEvents = () => {
+
+  let content = document.querySelector('.write-up');
+  // let button = document.querySelector('.foll')
+  
+  let showMore = document.querySelector('#show-more');
+  
+  
+  
+  
+  let resize = () => {
+  if (content.className == 'open') {
+     content.className = '';
+     showMore.innerHTML = 'Show More';
+  
+  }else{
+      content.className = 'open';
+      showMore.innerHTML = 'Show less';
+  }
+  
+  };
+  
+  showMore.addEventListener('click', resize);
+  
+}
+
+
+window.onload = () => {
+setupEvents()
+}
+
+let myMessage = document.getElementById('message');
+
+let fadeIn = () => {
+ myMessage.className = 'show';
+}
+
+setTimeout(fadeIn, 3000);
+
+
+let colorChange = document.getElementById('colour-changer'); 
+
+let colorss = ['red','yellow','blue','green','pink'];
+let counter = 0; 
+
+let changeColor1 = () => {
+  if (counter == colorss.length) {
+      counter = 0;
+  }
+  colorChange.style.backgroundColor = colorss[counter];
+  counter++;
+}
+
+let clearTimer = setInterval(changeColor1, 3000);
+
+colorChange.onclick = () => {
+  clearInterval(clearTimer)
+  colorChange.style.background = '';
+  colorChange.innerHTML = 'Timer stopped';
+}
+
+
+
+
+
+
 
 
 
