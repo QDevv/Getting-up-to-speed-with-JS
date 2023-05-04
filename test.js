@@ -1743,6 +1743,33 @@ colorChange.onclick = () => {
 }
 
 
+console.log(document.forms.myForm);
+
+let myForm = document.forms.myForm;
+
+console.log(myForm.name.value);
+
+myForm.submit.onfocus = () => {
+    myForm.submit.style.background = "red"
+}
+
+myForm.submit.onblur = () => {
+    myForm.submit.style.background = ""
+}
+
+let messagge5 = document.getElementById('messagge')
+myForm.onsubmit = () => {
+  if (myForm.name.value == "") {
+    messagge5.innerHTML = 'Pls type a name';
+  }
+  else{
+    messagge5.innerHTML = ''
+  }
+}
+
+myForm.addEventListener('submit', errorTest)
+
+
 
 
 
