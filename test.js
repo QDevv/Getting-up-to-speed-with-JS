@@ -1769,6 +1769,44 @@ myForm.onsubmit = () => {
 
 myForm.addEventListener('submit', errorTest)
 
+// myForm.addEventListener('submit', errorTest)
+
+
+let pick = document.querySelectorAll('.co')
+
+console.log(typeof pick);
+
+// for (let i = 0; i < pick.length; i++) {
+//   pick[i].style.color = "red";
+// }
+
+//ARRAY.FROM Convert a nodelist to an array
+Array.from(pick).map((ad => {
+
+  ad.style.color = 'red';
+}))
+
+// CREATING ELEMENT
+
+const newElement = document.querySelector('.col');
+
+
+const lin = document.createElement('p');
+
+newElement.append(lin);
+
+lin.innerText = 'Maroon'
+
+
+lin.classList.add('co')
+
+
+
+
+
+
+
+
 
 
 
