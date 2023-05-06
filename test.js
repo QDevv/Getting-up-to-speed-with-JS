@@ -1805,6 +1805,111 @@ lin.classList.add('co')
 
 
 
+let btn = document.querySelector('.New-quote')
+let Quote = document.querySelector('.Quote')
+let person =  document.querySelector('.person')
+
+const allQuotes = [
+    {
+
+    Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate!swsswwssx  "`,
+    person: `albert Einstein`
+
+    },
+    {
+
+        Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate!jhjhjh"`,
+        person: `samba doouglas`
+    
+    },
+
+    {
+
+            Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate!gbbbbb"`,
+            person: `Taylor swift`
+        
+     },
+
+     {
+
+        Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate!vdddd"`,
+        person: `honu lulu`
+    
+    },
+
+    {
+
+            Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate vvvc!"`,
+            person: `Felix jhu`
+        
+    },
+
+    {
+
+        Quote:`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error! Nisi voluptatibus minima cupiditate vvvc!"`,
+        person: `sam hadd`
+    
+}
+
+
+    // allQuotes[0].person
+
+]
+
+
+// console.log(randomQuote);
+
+const GenerateQuote = () => {
+
+    let randomQuote = Math.trunc(Math.random()*allQuotes.length)
+
+    console.log(randomQuote);
+    // let randomQuote = Math.trunc((Math.random*10))
+   
+    if (allQuotes.length - randomQuote >= 0) {
+
+        console.log(randomQuote);
+
+        Quote.innerHTML = allQuotes[randomQuote].Quote
+
+        person.innerHTML = allQuotes[randomQuote].person
+        
+    }   
+    
+}
+
+btn.addEventListener('click', GenerateQuote)
+
+
+// Variables
+
+let openBtn = document.getElementById('open-btn')
+
+let modalContainer = document.getElementById('modal-container')
+
+let closeBtn = document.getElementById('close-btn')
+
+// EVENT LISTENERS
+
+openBtn.addEventListener('click', function () {
+    modalContainer.style.display = 'block'
+})
+
+closeBtn.addEventListener('click', function () {
+    modalContainer.style.display = 'none';
+})
+
+window.addEventListener('click', function (e) {
+
+    console.log(e.target);
+    if (e.target === modalContainer) {
+        modalContainer.style.display = 'none'; 
+    }
+   
+})
+
+// AnimationEffect
+
 
 
 
