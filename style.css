@@ -94,3 +94,66 @@ body{
     transition: background 0.7s;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('images/background-crew-tablet.jpg') no-repeat center center/ cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 50%;
+    height: 500px;
+    background-color: rgb(245, 217, 181);
+    border-radius:10px;
+    box-shadow: 0 0 4px rgb(149, 141, 141);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 2, 41);
+    color: white;
+    width: 70%;
+    font-size: 45px;
+    border-radius: 5px;
+}
+
+.controls{
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+   gap: 10px;
+   width: 50%;
+   margin-top: 20px;
+
+}
+.start{
+    background-color: rgb(23, 132, 191);
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 70px;
+    text-align: center;
+
+
+}
+.reset{
+    background-color:rgb(24, 154, 154);
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 70px;
+    text-align: center;
+
+
+
+}

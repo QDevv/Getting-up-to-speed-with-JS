@@ -1892,7 +1892,72 @@ let closeBtn = document.getElementById('close-btn')
 // EVENT LISTENERS
 
 openBtn.addEventListener('click', function () {
-    modalContainer.style.display = 'block'
+let start = document.querySelector('.start')
+let Reset = document.querySelector('.reset')
+let Hours = document.querySelector('.hrs')
+let mins = document.querySelector('.mins')
+let sec = document.querySelector('.sec')
+
+
+console.log(mins.innerHTML[1]);
+console.log(sec.innerHTML[1]);
+
+let counter = 0;
+let counter2 = 0;
+let counter3 = 0;
+const secText = sec.textContent;
+
+let startTimer = () => {
+    
+
+
+   setInterval(() => {
+    if ( sec.innerHTML <= 8) {
+        sec.innerHTML = '0' + counter++;
+    }
+    else if (sec.innerHTML > 8 && sec.innerHTML <=18)
+    {
+        sec.innerHTML = counter++;
+    }
+    else if (sec.innerHTML == 19) {
+        // counter2++;
+        counter = 0;
+
+        sec.innerHTML = '00';
+        mins.innerHTML = '0' + ++counter2;
+        sec.innerHTML = '0' + counter++;
+        
+    }
+     if (mins.innerHTML == '02') {
+        mins.innerHTML = '00';
+        Hours.innerHTML = '0' + ++counter3;
+        sec.innerHTML = '0' + counter++;
+
+
+        
+    }
+
+    
+   }, 1000);
+
+    
+    // counter++;
+    
+
+
+//  if (sec.innerHTML[1] == '9') {
+//     sec.innerHTML = 10;
+//     sec.innerHTML++;
+    
+// }
+
+
+// if (sec.innerHTML == '60') {
+//     mins.innerHTML[1]
+// }
+}
+
+start.addEventListener('click', startTimer)
 })
 
 closeBtn.addEventListener('click', function () {
@@ -1910,6 +1975,72 @@ window.addEventListener('click', function (e) {
 
 // AnimationEffect
 
+let start = document.querySelector('.start')
+let Reset = document.querySelector('.reset')
+let Hours = document.querySelector('.hrs')
+let mins = document.querySelector('.mins')
+let sec = document.querySelector('.sec')
+
+
+console.log(mins.innerHTML[1]);
+console.log(sec.innerHTML[1]);
+
+let counter = 0;
+let counter2 = 0;
+let counter3 = 0;
+const secText = sec.textContent;
+
+let startTimer = () => {
+    
+
+
+   setInterval(() => {
+    if ( sec.innerHTML <= 8) {
+        sec.innerHTML = '0' + counter++;
+    }
+    else if (sec.innerHTML > 8 && sec.innerHTML <=18)
+    {
+        sec.innerHTML = counter++;
+    }
+    else if (sec.innerHTML == 19) {
+        // counter2++;
+        counter = 0;
+
+        sec.innerHTML = '00';
+        mins.innerHTML = '0' + ++counter2;
+        sec.innerHTML = '0' + counter++;
+        
+    }
+     if (mins.innerHTML == '02') {
+        mins.innerHTML = '00';
+        Hours.innerHTML = '0' + ++counter3;
+        sec.innerHTML = '0' + counter++;
+
+
+        
+    }
+
+    
+   }, 1000);
+
+    
+    // counter++;
+    
+
+
+//  if (sec.innerHTML[1] == '9') {
+//     sec.innerHTML = 10;
+//     sec.innerHTML++;
+    
+// }
+
+
+// if (sec.innerHTML == '60') {
+//     mins.innerHTML[1]
+// }
+}
+
+start.addEventListener('click', startTimer)
 
 
 
