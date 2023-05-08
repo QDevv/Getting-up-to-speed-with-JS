@@ -2050,6 +2050,51 @@ start.addEventListener('click', startTimer)
 
 
 
+const startStopBtn = document.querySelector('.startStopBtn');
+const resetBtn = document.querySelector('.resetBtn');
+
+let mins = 0;
+let hrs = 0;
+let sec = 0;
+
+let leadingMinutes = 0;
+let leadingSecs = 0;
+let leadingHours = 0;
+
+
+function stopWatch() {
+    sec++;
+    if (sec / 60 === 1) {
+        sec = 0;
+        mins++;
+
+        if (mins / 60 === 1) {
+            mins = 0;
+            hrs++;
+        }
+    }
+
+    if (sec < 10 ) {
+       leadingSecs = '0' + sec.toString() 
+    }
+    else{
+        leadingSecs = sec;
+    }
+    if (mins < 10 ) {
+        leadingMinutes = '0' + mins.toString() 
+     }
+     else{
+         leadingMinutes = mins;
+     }  if (hrs < 10 ) {
+        leadingHours = '0' + hrs.toString() 
+     }
+     else{
+         leadingHours = hrs;
+     }
+     let displayTimer = document.getElementById('timer').innerText = leadingHours + ':' + leadingMinutes + ':' + leadingSecs;
+}
+
+window.setInterval(stopWatch, 1)
 
 
 
