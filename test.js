@@ -2053,9 +2053,9 @@ start.addEventListener('click', startTimer)
 const startStopBtn = document.querySelector('.startStopBtn');
 const resetBtn = document.querySelector('.resetBtn');
 
-let mins = 0;
+let minss = 0;
 let hrs = 0;
-let sec = 0;
+let secc = 0;
 
 let leadingMinutes = 0;
 let leadingSecs = 0;
@@ -2095,6 +2095,75 @@ function stopWatch() {
 }
 
 window.setInterval(stopWatch, 1)
+
+
+
+const addTask = document.getElementById('add-task');
+const taskContainer = document.getElementById('task-container')
+const inputTask = document.getElementById('input-task');
+
+// console.log(inputTask.parentElement);
+// EVENT LISTENER FOR ADD BUTTON
+
+
+function todo (){
+
+    let task = document.createElement('div');
+    task.classList.add('task');
+
+    let li = document.createElement('li');
+     
+    li.innerText = `${inputTask.value}`;
+    task.appendChild(li);
+
+    let checkButton = document.createElement('button');
+    checkButton.innerHTML = 'Done';
+    checkButton.classList.add('checkTask');
+    task.appendChild(checkButton);
+
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'Delet';
+    deleteButton.classList.add('deletetask');
+    task.appendChild(deleteButton);
+
+
+    if (inputTask.value === '') {
+        document.querySelector('.errorMessage').innerHTML = 'Pls input a value';
+        alert('pls enter a task');
+        // document.querySelector('.errorMessage').style.color = 'red';
+    }
+    else{
+        taskContainer.appendChild(task);
+        
+        console.log(taskContainer.appendChild(task));
+        console.log(taskContainer);
+        // console.log(task);
+        // document.querySelector('.errorMessage').innerHTML = '';
+    };
+
+    inputTask.value = '';
+
+    
+checkButton.addEventListener('click', function (){
+    checkButton.parentElement.style.textDecoration = 'line-through';
+});
+
+
+deleteButton.addEventListener('click', function(e) {
+
+let target = e.target;
+
+target.parentElement.parentElement.remove();
+
+} );
+
+
+}
+
+
+addTask.addEventListener('click',todo);
+
+
 
 
 
