@@ -2166,6 +2166,133 @@ addTask.addEventListener('click',todo);
 
 
 
+const timer = document.querySelector('.timer');
+let hrs =  document.querySelector('.hrs');
+let mins =  document.querySelector('.mins');
+let sec =  document.getElementById('secc');
+
+let stop = null;
+
+let FuncCountDown = () => {
+
+    // console.log(sec.value);
+    // console.log(!isNaN(sec.value));
+    // console.log(mins.value);
+    // console.log(typeof sec.value);
+    // console.log('' + 5);
+    // console.log(!isNaN(''));
+
+    if (sec.value == '' && mins.value =='' && hrs.value == '') {
+        alert('Enter a number')
+    }
+
+
+   
+
+        if (!isNaN(sec.value) && sec.value != '') {
+            sec.value--;
+            console.log('first if');
+            
+        }
+        //  if (sec.value == 0) {
+        //     clearInterval(stop)
+        //     console.log('kl');
+        //  }
+         if (sec.value <= 0 && mins.value === '' && hrs.value == 0) {
+            console.log('lop');
+            clearInterval(stop);
+            console.log('first CI is active');
+
+         }
+         if (sec.value <= 0 && mins.value == 0 && hrs.value == 0) {
+            console.log('second condition works');
+            clearInterval(stop);
+            console.log('neww CI is active');
+            
+         }
+
+         if (sec.value <= 0 && mins.value == 0 && hrs.value == '') {
+            console.log('second condition works');
+            clearInterval(stop);
+            console.log('second CI is active');
+            
+         }
+         if (sec.value <= 0 && !isNaN(mins.value) && mins.value != 0) {
+            sec.value = 59;
+            console.log('kkm');
+            if (sec.value == 59) {
+                sec.value--;
+                mins.value--;
+                console.log('im decreasing sec and min');
+            }
+         }
+         if (mins.value == 0 && !isNaN(hrs.value) && hrs.value != 0) {
+            hrs.value--;
+            sec.value = 59;
+            mins.value = 59;
+            console.log('111');
+            if (mins.value && sec.value == 59) {
+                sec.value--;    
+                console.log('popo');
+            }
+         }
+
+         if (hrs.value == 0) {
+            hrs.value = '0'
+            console.log('i return hrs to 0');
+         }
+         if (sec.value <= 0 && mins.value == 0 && !isNaN(hrs.value) && hrs.value != 0) {
+            sec.value == 59;
+            mins.value == 59;
+            hrs.value--;
+            console.log('222');
+
+            if (sec.value == 59 && mins.value == 59 ) {
+                sec.value--;
+                console.log('333');
+
+                if (sec.value == 0) {
+                    mins.value--;
+                console.log('444');
+
+                }
+            }
+          
+         }
+
+
+
+ 
+} 
+
+document.querySelector('.startStop').addEventListener('click', () => { stop = setInterval(FuncCountDown
+    
+, 100)})
+
+
+
+ //     if (sec.value < 10) {
+        //         sec.value = '0' +  sec.value;
+        //     }
+        //   }
+        //   else if (sec.value == 59) {
+        //     sec.value--;
+        //   }
+        //   if (sec.value == 0 && mins.value == 0 || mins.value == '') {
+        //    window.clearInterval(stop)
+        //   }
+        
+    document.querySelector('.reset').addEventListener('click', () => {
+       window.clearInterval(stop)
+       console.log(stop);
+        sec.value = "00"
+        mins.value = "00"
+        hrs.value = "00" 
+        
+    })
+
+
+
 
 
 
