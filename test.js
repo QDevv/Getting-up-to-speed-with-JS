@@ -2293,6 +2293,39 @@ document.querySelector('.startStop').addEventListener('click', () => { stop = se
 
 
 
+    let Text = document.querySelector('.text');
+// console.log(Text.innerHTML.color = 'red');
+
+
+let LoremArray = Text.innerHTML.split(' ');
+console.log(LoremArray);
+
+// let ss = ['1bb', '2', '3', '4']
+// console.log(ss[0].style.color);
+
+// console.log(ss.split(' '));
+
+// console.log(ss[1]);
+
+let HighlightHex = () => {
+
+  LoremArray.map(each => {
+// let cvb =  Text.parentElement;   
+   cvb = `'<p>${each}</p>'`;
+   console.log(cvb);
+//    console.log(cvb.length);
+
+//    if (cvb.length >= 8) {
+//     cvb.style.color = 'yellow'
+//    }
+
+    console.log(Text);
+
+  })
+}
+
+HighlightHex()
+
 
 
 
