@@ -2328,6 +2328,62 @@ HighlightHex()
 
 
 
+let Text = document.querySelector('.text');
+let Headd = document.querySelector('.hd');
+
+// console.log(Text.innerHTML.color = 'red');
+
+
+let LoremArray = Text.innerHTML.split(' ');
+console.log(LoremArray);
+
+// let ss = ['1bb', '2', '3', '4']
+// console.log(ss[0].style.color);
+
+// console.log(ss.split(' '));
+
+console.log(Headd);
+// console.log(ss[1]);
+
+
+let HighlightHex = () => {
+
+   Text.innerHTML = '';
+
+  const snew = document.createElement('p');
+
+  LoremArray.forEach(each => {
+    console.log(each);
+   
+  let snew = document.createElement('p');
+  // Text.innerHTML = '';
+  snew.textContent = `${each}`;
+  Text.appendChild(snew)
+
+  console.log(snew);
+  // console.log(Text.children);
+  // console.log(snew);
+  // console.log(snew.parentElement);
+  
+  // console.log();
+
+  if (snew.innerHTML.length >= 8) {
+    snew.style.backgroundColor = 'red';
+    snew.style.width = '80px'
+    snew.style.display = 'inline'
+    Text.style.display = 'inline'
+    // console.log('dddd');
+  }
+ 
+
+
+  })
+}
+
+HighlightHex()
+
+
+
 
 
 
