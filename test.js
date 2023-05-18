@@ -2383,6 +2383,32 @@ let HighlightHex = () => {
 HighlightHex()
 
 
+let para = document.querySelector('.text'); 
+
+
+// Convert to an Array
+
+let arrPara = para.innerHTML.split(' ');
+console.log(arrPara);
+
+
+
+
+para.innerHTML = arrPara.map(prg => prg.length > 8 ? `<span style="background-color: yellow;">${prg}</span>` : prg).join(' ');
+
+// console.log(prg);
+
+
+let ard = ['edd', 'fdcz', 'ssg', 'wswh', 'kpp']
+
+let vv = ard.map(ch => ch.length > 3 ? `<span style="color: red;">${ch}</span>` : console.log(ch))
+console.log(vv.join(' '));
+// console.log(ardlet vv );
+
+
+
+
+
 
 
 
