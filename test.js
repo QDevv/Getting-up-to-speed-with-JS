@@ -2435,6 +2435,30 @@ console.log(vv.join(' '));
 
 
 
+let count = document.querySelector('h1');
+
+let decrease = document.querySelector('.decrease');
+let increase = document.querySelector('.increase');
+let reset = document.querySelector('.reset');
+
+let count1 = 0
+
+decrease.addEventListener('click', () => {
+
+    count.innerHTML--;
+})
+
+increase.addEventListener('click', () => {
+
+    count.innerHTML++;
+})
+
+reset.addEventListener('click', () => {
+
+    count.innerHTML = 0;
+})
+
+
 
 
 
