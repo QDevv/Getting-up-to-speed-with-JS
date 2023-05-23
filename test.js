@@ -2457,7 +2457,28 @@ reset.addEventListener('click', () => {
 
     count.innerHTML = 0;
 })
+let count = 0;
 
+const value = document.querySelector('h1');
+const controls =  document.querySelectorAll('.btn');
+
+
+controls.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+   let style = e.currentTarget.classList;
+
+   if (style.contains('decrease')) {
+    count--;
+   }
+   else if (style.contains('increase')) {
+     count++;
+   }
+   else{
+    count = '0';
+   }
+   value.innerHTML = count;
+    })
+})
 
 
 
