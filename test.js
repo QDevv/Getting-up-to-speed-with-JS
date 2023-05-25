@@ -2499,3 +2499,46 @@ controls.forEach(btn => {
 
 
 
+let arrowLeft = document.querySelector('.arrowLeft')
+let arrowRight = document.querySelector('.arrowRight')
+let img = document.querySelector('.img');
+let Name = document.querySelector('h4');
+let profession = document.querySelector('h6');
+let Review = document.querySelector('p');
+
+
+let reviewsArray = [
+
+    {
+        Image2: './Images/profile-2.jpg', Name2 : 'Tyler Ray', profession: 'Product Designer',
+       
+        review: "Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur"
+    },
+
+    {
+        Image2: './Images/profile-3.jpg', Name2 : 'Mary Wallace', profession: 'React Developer',
+       
+        review: "Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur"
+    },
+
+    {
+        Image2: './Images/profile-2.jpg', Name2 : 'Andre tay', profession: 'lawyer',
+       
+        review: "Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur"
+    }
+]
+
+
+console.log(reviewsArray[0].Image2);
+
+
+let ffv = [{namee: 'ss', age: '55'}, {namee2: 'sds', age1: '55'}]
+
+
+
+let NextRev = () => {
+if (reviewsArray[0]) {
+    
+}
+
+}
