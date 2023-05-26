@@ -2537,8 +2537,86 @@ let ffv = [{namee: 'ss', age: '55'}, {namee2: 'sds', age1: '55'}]
 
 
 let NextRev = () => {
-if (reviewsArray[0]) {
+reviewsArray.map(rev => {
+  if (rev.Image2 == reviewsArray[rev].Image2.innerText) {
     
-}
+  }
+})
 
 }
+
+
+let arrowLeft = document.querySelector('.arrowLeft')
+let arrowRight = document.querySelector('.arrowRight')
+let img = document.querySelector('.img');
+let Name = document.querySelector('h4');
+let profession = document.querySelector('h6');
+let Rev = document.querySelector('p');
+
+
+let reviewsArray = [
+
+    {
+        Image2: './Images/profile-1.jpg', Name2 : 'Susan Smith', profession: 'Web Developer',
+       
+        review: "inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur Tempore repellendus quo odio, fugiat maiores"
+    },
+    {
+        Image2: './Images/profile-2.jpg', Name2 : 'Tyler Ray', profession: 'Product Designer',
+       
+        review: "Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur"
+    },
+
+    {
+        Image2: './Images/profile-3.jpg', Name2 : 'Mary Wallace', profession: 'React Developer',
+       
+        review: "Neque iste itaque odit eos ducimus repudiandae. Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur.  adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur"
+    },
+
+    {
+        Image2: './Images/Best.jpg', Name2 : 'Andre tay', profession: 'lawyer',
+       
+        review: "ducimus repudiandae. adipisicing elit. Inventore official Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos  ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur Neque iste itaque odit eos  ipsam eius voluptate"
+    }
+]
+
+
+img.src = reviewsArray[0].Image2 = './Images/profile-1.jpg';
+
+console.log(reviewsArray[0].Image2);
+
+
+let ffv = [{namee: 'ss', age: '55'}, {namee2: 'sds', age1: '55'}]
+
+
+let counter = 0;
+
+let aa = counter;
+
+let NextRev = () => {
+
+    if (counter >= reviewsArray.length -1 ) {
+    
+        counter = 0;
+        aa = counter;
+    
+    }
+
+    else{
+
+     aa = ++counter;
+    }
+  
+  img.src = reviewsArray[`${aa}`].Image2 ;
+  console.log(reviewsArray[`${aa}`].Name2 );
+  Name.innerHTML = reviewsArray[`${aa}`].Name2;
+  profession.innerHTML = reviewsArray[`${aa}`].profession;
+  Rev.innerHTML = reviewsArray[`${aa}`].review;
+  console.log(reviewsArray[0].review);
+
+  console.log( reviewsArray[`${aa}`].review);
+}
+
+       
+
+        arrowRight.addEventListener('click', NextRev)
