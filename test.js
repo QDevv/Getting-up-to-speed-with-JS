@@ -2620,3 +2620,117 @@ let NextRev = () => {
        
 
         arrowRight.addEventListener('click', NextRev)
+
+        let arrowLeft = document.querySelector(".arrowLeft");
+let arrowRight = document.querySelector(".arrowRight");
+let img = document.querySelector(".img");
+let Name = document.querySelector("h4");
+let profession = document.querySelector("h6");
+let Rev = document.querySelector("p");
+let btn = document.querySelector('button')
+
+let reviewsArray = [
+  {
+    Image2: "./Images/profile-1.jpg",
+    Name2: "Susan Smith",
+    profession: "Web Developer",
+
+    review:
+      "inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur Tempore repellendus quo odio, fugiat maiores",
+  },
+  {
+    Image2: "./Images/profile-2.jpg",
+    Name2: "Tyler Ray",
+    profession: "Product Designer",
+
+    review:
+      "Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos ducimus repudiandae. adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur",
+  },
+
+  {
+    Image2: "./Images/profile-3.jpg",
+    Name2: "Mary Wallace",
+    profession: "React Developer",
+
+    review:
+      "Neque iste itaque odit eos ducimus repudiandae. Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur.  adipisicing elit. Inventore officia ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur",
+  },
+
+  {
+    Image2: "./Images/Best.jpg",
+    Name2: "Andre tay",
+    profession: "lawyer",
+
+    review:
+      "ducimus repudiandae. adipisicing elit. Inventore official Tempore repellendus quo odio, fugiat maiores inventore molestias cum? Aliquam ratione ducimus quis minima libero consectetur. Neque iste itaque odit eos  ipsam eius voluptate maxime nostrum ullam cupiditate laudantium. Earum, aliquid accusantium? Lorem, ipsum dolor sit amet consectetur Neque iste itaque odit eos  ipsam eius voluptate",
+  },
+];
+
+img.src = reviewsArray[0].Image2 = "./Images/profile-1.jpg";
+
+console.log(reviewsArray[0].Image2);
+
+let counter = 0;
+
+let aa = counter;
+
+const change = () => {
+    img.src = reviewsArray[`${aa}`].Image2;
+  console.log(reviewsArray[`${aa}`].Name2);
+  Name.innerHTML = reviewsArray[`${aa}`].Name2;
+  profession.innerHTML = reviewsArray[`${aa}`].profession;
+  Rev.innerHTML = reviewsArray[`${aa}`].review;
+  console.log(reviewsArray[0].review);
+
+  console.log(reviewsArray[`${aa}`].review);
+}
+
+let NextRev = () => {
+  if (counter >= reviewsArray.length - 1) {
+    counter = 0;
+    aa = counter;
+  } else {
+    aa = ++counter;
+  }
+
+  change();
+
+  
+};
+
+const prevRev = () => {
+    if (counter <= 0) {
+        counter = reviewsArray.length - 1
+        aa = counter;
+    }
+    else{
+        aa = --counter;
+    }
+    change()
+}
+
+arrowRight.addEventListener("click", NextRev);
+
+arrowLeft.addEventListener('click', prevRev)
+
+
+
+const RandomQuotes = () => {
+
+let randomProfile = Math.trunc(Math.random() * reviewsArray.length);
+  aa = randomProfile;
+  
+    if (reviewsArray[aa].Name2 == Name.innerHTML) {
+        
+    change()
+    console.log('not changing');
+    }
+      else{
+        change()
+        console.log('changed');
+      }
+
+
+}
+
+btn.addEventListener('click', RandomQuotes)
