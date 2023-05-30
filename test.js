@@ -2734,3 +2734,22 @@ let randomProfile = Math.trunc(Math.random() * reviewsArray.length);
 }
 
 btn.addEventListener('click', RandomQuotes)
+   // Function to toggle the menu on small screens
+   function toggleMenu() {
+    var menu = document.querySelector('.navbar ul');
+    menu.classList.toggle('show');
+
+    var hamburger = document.querySelector('.navbar .hamburger');
+    var cross = document.querySelector('.navbar .cross');
+
+    hamburger.style.display = menu.classList.contains('show') ? 'none' : 'block';
+    cross.style.display = menu.classList.contains('show') ? 'block' : 'none';
+  }
+
+  // Event listener for the hamburger and cross icons
+  var hamburger = document.querySelector('.navbar .hamburger');
+  hamburger.addEventListener('click', toggleMenu);
+
+  var cross = document.querySelector('.navbar .cross');
+  cross.addEventListener('click', toggleMenu)
+  
