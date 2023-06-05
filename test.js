@@ -2753,3 +2753,23 @@ btn.addEventListener('click', RandomQuotes)
   var cross = document.querySelector('.navbar .cross');
   cross.addEventListener('click', toggleMenu)
   
+
+
+  const menu = document.querySelector('.menu');
+
+const hamburger = document.querySelector('.hamburger');
+
+const cross = document.querySelector('.cross');
+
+let toggleFunc = () => {
+     menu.classList.toggle('show');
+
+     hamburger.style.display = menu.classList.contains('show') ? 'none' : 'block';
+
+     cross.style.display = menu.classList.contains('show') ? 'block' : 'none';
+
+}
+
+hamburger.addEventListener('click', toggleFunc)
+
+cross.addEventListener('click', toggleFunc)
