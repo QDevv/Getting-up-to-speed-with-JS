@@ -2773,3 +2773,27 @@ let toggleFunc = () => {
 hamburger.addEventListener('click', toggleFunc)
 
 cross.addEventListener('click', toggleFunc)
+
+
+let modalOverlay = document.querySelector(".modal-overlay");
+let modalBtn = document.querySelector(".btn-modal");
+let closeBtn = document.querySelector(".close-btn");
+
+let OpenModal = () => {
+  if (modalOverlay.classList.contains("open-modal")) {
+    modalOverlay.classList.remove("open-modal");
+    document.querySelector('.banner').style.display = 'flex';
+
+
+    console.log('removeee');
+  } else {
+    modalOverlay.classList.add("open-modal");
+    document.querySelector('.banner').style.display = 'none';
+    console.log('adddd');
+
+  }
+};
+
+modalBtn.addEventListener("click", OpenModal);
+
+closeBtn.addEventListener("click", OpenModal);
