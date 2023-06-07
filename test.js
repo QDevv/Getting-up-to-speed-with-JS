@@ -2797,3 +2797,16 @@ let OpenModal = () => {
 modalBtn.addEventListener("click", OpenModal);
 
 closeBtn.addEventListener("click", OpenModal);
+
+let plus = document.querySelector('.plus-btn');
+let answers = document.querySelector('.answers');
+let bb = document.querySelector('.bb');
+let minus = document.querySelector('.fa-minus');
+
+let revealAnswers = () => {
+    plus.style.display = plus.style.display !== 'none' ? 'none' : 'block';
+    minus.style.display = 'block';
+
+}
+
+plus.addEventListener('click', revealAnswers)
