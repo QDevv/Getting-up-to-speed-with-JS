@@ -2810,3 +2810,18 @@ let revealAnswers = () => {
 }
 
 plus.addEventListener('click', revealAnswers)
+let cplus = document.querySelector('.plus-btn');
+let canswers = document.querySelector('.answers p');
+let cbb = document.querySelector('.bb');
+let cminus = document.querySelector('.minus-btn');
+
+let crevealAnswers = () => {
+    plus.style.display = plus.style.display !== 'none' ? 'none' : 'block';
+    minus.style.display = minus.style.display === 'none' ? 'block' : 'none';
+    answers.classList.toggle('show');
+}
+
+plus.addEventListener('click', revealAnswers);
+
+minus.addEventListener('click', revealAnswers);
+

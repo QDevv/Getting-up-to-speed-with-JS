@@ -209,4 +209,87 @@ button{
 #pause{
     background-color: red;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:50%;
+    /* border: 2px solid green; */
+}
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 80%;
+    /* border: 2px solid red; */
+}
+.acc{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 14px;
+    width: 100%;
+    /* border: 2px solid blue; */
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+    /* position: relative; */
+
+}
+.Local-farmers, .Major-credits, .Organic-ingredients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    /* border:d; */
+    /* border-bottom:1.8px solid rgba(225, 225, 225, 0.9); */
+}
+.Local-farmers button, .Major-credits button,.Organic-ingredients button{
+    margin-left: auto;
+    background-color: white;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+    padding: 1px;
+    border-radius: 2px;
+}
+.Local-farmers h5, .Major-credits h5, .Organic-ingredients h5 {
+      letter-spacing:4px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.answers{
+    position: relative;
+}
+
+.answers p{
+    display: none;
+}
+.answers p.show{
+    display: block;
+    border: 2px solid red;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+
+/* .fa-minus{
+    
+} */
+.fa-minus.show{
+    display: block;
+}
