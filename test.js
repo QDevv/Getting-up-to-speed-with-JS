@@ -2825,3 +2825,25 @@ plus.addEventListener('click', revealAnswers);
 
 minus.addEventListener('click', revealAnswers);
 
+
+
+let eplus = document.querySelector('.plus-btn');
+let xanswers = document.querySelector('.answers p');
+let wb = document.querySelector('.bb');
+let vminus = document.querySelector('.minus-btn');
+let acc = document.querySelector('.acc');
+let ans = document.querySelector('.answers');
+
+let rfevealAnswers = () => {
+    plus.style.display = plus.style.display !== 'none' ? 'none' : 'block';
+    minus.style.display = minus.style.display === 'none' ? 'block' : 'none';
+    answers.classList.toggle('show');
+    acc.classList.toggle('show');
+    ans.classList.toggle('show')
+}
+
+plus.addEventListener('click', revealAnswers);
+
+minus.addEventListener('click', revealAnswers);
+
+
